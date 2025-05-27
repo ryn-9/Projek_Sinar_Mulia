@@ -44,18 +44,18 @@ namespace Projek_Sinar_Mulia
             }
         }
 
-            //bool success = UserValid.Login(username, password);
-            //if (success)
-            //{
-            //    MessageBox.Show("Login berhasil!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    var homepage = new Homepage();
-            //    homepage.Show();
-            //    this.Hide();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Username atau Password salah!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
+        //bool success = UserValid.Login(username, password);
+        //if (success)
+        //{
+        //    MessageBox.Show("Login berhasil!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    var homepage = new Homepage();
+        //    homepage.Show();
+        //    this.Hide();
+        //}
+        //else
+        //{
+        //    MessageBox.Show("Username atau Password salah!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //}
         //}
 
         private void lblregister_Click(object sender, EventArgs e)
@@ -65,7 +65,19 @@ namespace Projek_Sinar_Mulia
             this.Hide();
         }
 
-        private void cbintip_CheckedChanged(object sender, EventArgs e)
+
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbintip_CheckedChanged_1(object sender, EventArgs e)
         {
             if (cbintip.Checked)
             {

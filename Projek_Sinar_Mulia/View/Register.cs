@@ -89,5 +89,10 @@ namespace Projek_Sinar_Mulia
             login.Show();
             this.Hide();
         }
+
+        private void Register_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
