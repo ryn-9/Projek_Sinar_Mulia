@@ -52,7 +52,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Libre Bodoni", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(413, 30);
+            label1.Location = new Point(407, 30);
             label1.Name = "label1";
             label1.Size = new Size(66, 29);
             label1.TabIndex = 0;
@@ -65,7 +65,7 @@
             tbusername.BackColor = Color.Gainsboro;
             tbusername.BorderStyle = BorderStyle.None;
             tbusername.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbusername.Location = new Point(325, 114);
+            tbusername.Location = new Point(313, 114);
             tbusername.Name = "tbusername";
             tbusername.Size = new Size(259, 14);
             tbusername.TabIndex = 1;
@@ -75,7 +75,7 @@
             tbpassword.BackColor = Color.Gainsboro;
             tbpassword.BorderStyle = BorderStyle.None;
             tbpassword.Font = new Font("Arial Rounded MT Bold", 9F);
-            tbpassword.Location = new Point(325, 184);
+            tbpassword.Location = new Point(313, 184);
             tbpassword.Name = "tbpassword";
             tbpassword.Size = new Size(259, 14);
             tbpassword.TabIndex = 2;
@@ -90,7 +90,7 @@
             btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Font = new Font("Dubai", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = SystemColors.ControlLightLight;
-            btnLogin.Location = new Point(338, 331);
+            btnLogin.Location = new Point(326, 331);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(213, 31);
             btnLogin.TabIndex = 5;
@@ -105,7 +105,7 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = SystemColors.ControlLightLight;
-            label4.Location = new Point(338, 365);
+            label4.Location = new Point(328, 365);
             label4.Name = "label4";
             label4.Size = new Size(114, 15);
             label4.TabIndex = 6;
@@ -118,7 +118,7 @@
             lblregister.Cursor = Cursors.Hand;
             lblregister.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             lblregister.ForeColor = Color.LimeGreen;
-            lblregister.Location = new Point(458, 365);
+            lblregister.Location = new Point(448, 365);
             lblregister.Name = "lblregister";
             lblregister.Size = new Size(89, 15);
             lblregister.TabIndex = 7;
@@ -129,7 +129,7 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(316, 107);
+            pictureBox1.Location = new Point(304, 107);
             pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(273, 28);
@@ -141,7 +141,7 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(316, 178);
+            pictureBox2.Location = new Point(304, 178);
             pictureBox2.Margin = new Padding(2);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(273, 28);
@@ -154,7 +154,7 @@
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(290, 110);
+            pictureBox3.Location = new Point(278, 110);
             pictureBox3.Margin = new Padding(2);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(19, 21);
@@ -167,7 +167,7 @@
             pictureBox4.BackColor = Color.Transparent;
             pictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(290, 181);
+            pictureBox4.Location = new Point(278, 181);
             pictureBox4.Margin = new Padding(2);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(19, 21);
@@ -179,7 +179,7 @@
             // 
             cbintip.AutoSize = true;
             cbintip.BackColor = Color.Transparent;
-            cbintip.Location = new Point(594, 185);
+            cbintip.Location = new Point(582, 186);
             cbintip.Margin = new Padding(2);
             cbintip.Name = "cbintip";
             cbintip.Size = new Size(15, 14);
@@ -208,6 +208,7 @@
             Controls.Add(pictureBox2);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
