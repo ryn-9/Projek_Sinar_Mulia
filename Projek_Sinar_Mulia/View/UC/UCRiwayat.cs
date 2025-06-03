@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Projek_Sinar_Mulia
+namespace Projek_Sinar_Mulia.View.UC
 {
-    public partial class UCriwayat: UserControl
+    public partial class UCRiwayat: UserControl
     {
-        public UCriwayat()
+        public UCRiwayat()
         {
             InitializeComponent();
         }

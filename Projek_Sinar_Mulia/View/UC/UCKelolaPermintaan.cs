@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Projek_Sinar_Mulia
+namespace Projek_Sinar_Mulia.View.UC
 {
-    public partial class UCabout: UserControl
+    public partial class UCKelolaPermintaan: UserControl
     {
-        public UCabout()
+        public UCKelolaPermintaan()
         {
             InitializeComponent();
         }
