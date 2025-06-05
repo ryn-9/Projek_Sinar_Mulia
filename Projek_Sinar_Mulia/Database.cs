@@ -13,28 +13,30 @@ namespace Projek_Sinar_Mulia
         private static string port = "5432";
         private static string username = "postgres";
         private static string password = "babamamak55";
-        private static string database = "SinarMulia";
+        private static string database = "Tabel projek PBO";
 
         private static NpgsqlConnection conn;
 
         public static NpgsqlConnection GetConnection()
         {
-            if (conn == null)
-            {
-                string connString = $"Host={localhost};Port={port};Username={username};Password={password};Database={database}";
-                conn = new NpgsqlConnection(connString);
-            }
-            return conn;
+            string connString = $"Host={localhost};Port={port};Username={username};Password={password};Database={database}";
+            return new NpgsqlConnection(connString);
+            //if (conn == null)
+            //{
+            //    string connString = $"Host={localhost};Port={port};Username={username};Password={password};Database={database}";
+            //    conn = new NpgsqlConnection(connString);
+            //}
+            //return conn;
         }
 
-        public static void CloseConnection()
-        {
-            if (conn != null)
-            {
-                conn.Close();
-                conn = null;
+        //public static void CloseConnection()
+        //{
+        //    if (conn != null)
+        //    {
+        //        conn.Close();
+        //        conn = null;
 
-            }
-        }
+        //    }
+        //}
     }
 }

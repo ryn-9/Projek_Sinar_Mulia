@@ -15,48 +15,40 @@ namespace Projek_Sinar_Mulia
             string username = tbusername.Text;
             string password = tbpassword.Text;
 
-            string role = UserValid.CekRole(username, password);
-
-            if (role != null)
+            if (OperatorController.Login(username, password))
             {
-                MessageBox.Show("Login berhasil!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Login sebagai Operator");
+                var form = new HomepageOperator();
+                form.Show();
                 this.Hide();
-
-                if (role == "petani")
-                {
-                    var petaniForm = new HomepagePetani();
-                    petaniForm.Show();
-                }
-                else if (role == "operator")
-                {
-                    var homepageoperator = new HomepageOperator();
-                    homepageoperator.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Role tidak dikenali!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    this.Show();
-                }
+                return;
             }
-            else
+
+            if (PetaniController.Login(username, password))
             {
-                MessageBox.Show("Username atau Password salah!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Login sebagai Petani");
+                var form = new HomepagePetani();
+                form.Show();
+                this.Hide();
+                return;
             }
-        }
 
-        //bool success = UserValid.Login(username, password);
-        //if (success)
-        //{
-        //    MessageBox.Show("Login berhasil!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    var homepage = new Homepage();
-        //    homepage.Show();
-        //    this.Hide();
-        //}
-        //else
-        //{
-        //    MessageBox.Show("Username atau Password salah!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //}
-        //}
+            // Kalau dua-duanya gagal
+            MessageBox.Show("Username atau Password salah!", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            //bool success = UserValid.Login(username, password);
+            //if (success)
+            //{
+            //    MessageBox.Show("Login berhasil!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    var homepage = new Homepage();
+            //    homepage.Show();
+            //    this.Hide();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Username atau Password salah!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //}
+        }
 
         private void lblregister_Click(object sender, EventArgs e)
         {

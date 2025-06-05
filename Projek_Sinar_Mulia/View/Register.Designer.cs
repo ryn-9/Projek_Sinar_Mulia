@@ -43,12 +43,17 @@
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox6 = new PictureBox();
+            tbnotelp = new TextBox();
+            pictureBox7 = new PictureBox();
+            pictureBox8 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             SuspendLayout();
             // 
             // btnRegister
@@ -73,7 +78,7 @@
             tbpassword.BackColor = Color.Gainsboro;
             tbpassword.BorderStyle = BorderStyle.None;
             tbpassword.Font = new Font("Arial Rounded MT Bold", 9F);
-            tbpassword.Location = new Point(325, 150);
+            tbpassword.Location = new Point(325, 187);
             tbpassword.Name = "tbpassword";
             tbpassword.Size = new Size(258, 14);
             tbpassword.TabIndex = 10;
@@ -106,7 +111,7 @@
             tbvalidasi.BackColor = Color.Gainsboro;
             tbvalidasi.BorderStyle = BorderStyle.None;
             tbvalidasi.Font = new Font("Arial Rounded MT Bold", 9F);
-            tbvalidasi.Location = new Point(325, 187);
+            tbvalidasi.Location = new Point(325, 224);
             tbvalidasi.Name = "tbvalidasi";
             tbvalidasi.Size = new Size(258, 14);
             tbvalidasi.TabIndex = 14;
@@ -116,7 +121,7 @@
             // 
             cbintip1.AutoSize = true;
             cbintip1.BackColor = Color.Transparent;
-            cbintip1.Location = new Point(597, 152);
+            cbintip1.Location = new Point(597, 189);
             cbintip1.Margin = new Padding(2);
             cbintip1.Name = "cbintip1";
             cbintip1.Size = new Size(15, 14);
@@ -128,7 +133,7 @@
             // 
             cbintip2.AutoSize = true;
             cbintip2.BackColor = Color.Transparent;
-            cbintip2.Location = new Point(597, 188);
+            cbintip2.Location = new Point(597, 225);
             cbintip2.Margin = new Padding(2);
             cbintip2.Name = "cbintip2";
             cbintip2.Size = new Size(15, 14);
@@ -170,7 +175,7 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(315, 145);
+            pictureBox2.Location = new Point(315, 182);
             pictureBox2.Margin = new Padding(2);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(276, 26);
@@ -182,7 +187,7 @@
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(315, 181);
+            pictureBox3.Location = new Point(315, 218);
             pictureBox3.Margin = new Padding(2);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(276, 26);
@@ -195,7 +200,7 @@
             pictureBox4.BackColor = Color.Transparent;
             pictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(288, 183);
+            pictureBox4.Location = new Point(290, 221);
             pictureBox4.Margin = new Padding(2);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(22, 19);
@@ -221,13 +226,46 @@
             pictureBox6.BackColor = Color.Transparent;
             pictureBox6.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(288, 148);
+            pictureBox6.Location = new Point(290, 184);
             pictureBox6.Margin = new Padding(2);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(22, 19);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 24;
             pictureBox6.TabStop = false;
+            // 
+            // tbnotelp
+            // 
+            tbnotelp.BackColor = Color.Gainsboro;
+            tbnotelp.BorderStyle = BorderStyle.None;
+            tbnotelp.Font = new Font("Arial Rounded MT Bold", 9F);
+            tbnotelp.Location = new Point(325, 154);
+            tbnotelp.Name = "tbnotelp";
+            tbnotelp.Size = new Size(258, 14);
+            tbnotelp.TabIndex = 25;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.BackColor = Color.Transparent;
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(316, 146);
+            pictureBox7.Margin = new Padding(2);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(276, 26);
+            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox7.TabIndex = 26;
+            pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.BackColor = Color.Transparent;
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(292, 150);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(19, 18);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 27;
+            pictureBox8.TabStop = false;
             // 
             // Register
             // 
@@ -236,6 +274,9 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(881, 449);
+            Controls.Add(pictureBox8);
+            Controls.Add(tbnotelp);
+            Controls.Add(pictureBox7);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox5);
@@ -263,6 +304,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -285,5 +328,8 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
+        private TextBox tbnotelp;
+        private PictureBox pictureBox7;
+        private PictureBox pictureBox8;
     }
 }
