@@ -18,30 +18,18 @@ namespace Projek_Sinar_Mulia.View
         public HomepageOperator()
         {
             InitializeComponent();
-            picindikator.Visible = false;
+            picindicator.Visible = false;
         }
         private void MoveIndicator(Control button)
         {
-            picindikator.Top = button.Top;
-            picindikator.Visible = true;
+            picindicator.Top = button.Top;
+            picindicator.Visible = true;
         }
 
-        private void btnkelolapermintaan_Click(object sender, EventArgs e)
+        private void btnpermintaan_Click(object sender, EventArgs e)
         {
-            MoveIndicator(btnkelolapermintaan);
+            MoveIndicator(btnpermintaan);
             //UCMasuk(new UCkelolapermintaan());
-        }
-
-        private void btnriwayat_Click(object sender, EventArgs e)
-        {
-            MoveIndicator(btnriwayat);
-            //UCMasuk(new UCRiwayat());
-        }
-
-        private void btnabout_Click(object sender, EventArgs e)
-        {
-            MoveIndicator(btnabout);
-            //UCMasuk(new UCabout());
         }
         private void UCMasuk(UserControl uc)
         {
@@ -58,6 +46,26 @@ namespace Projek_Sinar_Mulia.View
         private void pnlutama_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HomepageOperator_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnlihatstatus_Click(object sender, EventArgs e)
+        {
+            MoveIndicator(btnlihatstatus);
+        }
+
+        private void btnabout_Click(object sender, EventArgs e)
+        {
+            MoveIndicator(btnabout);
         }
     }
 }
