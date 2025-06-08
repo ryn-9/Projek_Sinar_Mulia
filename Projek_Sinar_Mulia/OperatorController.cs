@@ -59,7 +59,7 @@ namespace Projek_Sinar_Mulia
             using (var conn = Database.GetConnection())
             {
                 conn.Open();
-                string query = "SELECT 1 FROM operator WHERE username = @username LIMIT 1";
+                string query = "select 1 from operator WHERE username = @username LIMIT 1";
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@username", username);
@@ -73,7 +73,7 @@ namespace Projek_Sinar_Mulia
             using (var conn = Database.GetConnection())
             {
                 conn.Open();
-                string query = "SELECT 1 FROM operator WHERE no_telephone = @no_telephone LIMIT 1";
+                string query = "select 1 from operator WHERE no_telephone = @no_telephone LIMIT 1";
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@no_telephone", no_telephone);

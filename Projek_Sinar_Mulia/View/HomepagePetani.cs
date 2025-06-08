@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projek_Sinar_Mulia.View.UC;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,7 +33,7 @@ namespace Projek_Sinar_Mulia
         private void btnriwayat_Click(object sender, EventArgs e)
         {
             MoveIndicator(btnriwayat);
-            //UCMasuk(new UCRiwayat());
+            UCMasuk(new Riwayat());
         }
 
         private void btnabout_Click(object sender, EventArgs e)

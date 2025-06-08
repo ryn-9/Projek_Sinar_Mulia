@@ -1,6 +1,6 @@
 ﻿namespace Projek_Sinar_Mulia.View.UC
 {
-    partial class UCRiwayat
+    partial class Riwayat
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,36 +29,27 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            btnKembali = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(148, 74);
+            dataGridView1.Location = new Point(104, 44);
+            dataGridView1.Margin = new Padding(2, 2, 2, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(715, 510);
+            dataGridView1.Size = new Size(500, 306);
             dataGridView1.TabIndex = 0;
-            // 
-            // btnKembali
-            // 
-            btnKembali.Location = new Point(364, 634);
-            btnKembali.Name = "btnKembali";
-            btnKembali.Size = new Size(236, 45);
-            btnKembali.TabIndex = 1;
-            btnKembali.Text = "Kembali";
-            btnKembali.UseVisualStyleBackColor = true;
             // 
             // UCRiwayat
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(btnKembali);
             Controls.Add(dataGridView1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "UCRiwayat";
-            Size = new Size(983, 728);
+            Size = new Size(688, 437);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
@@ -66,6 +57,5 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private Button btnKembali;
     }
 }
