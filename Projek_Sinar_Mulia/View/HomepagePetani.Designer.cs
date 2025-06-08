@@ -59,11 +59,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.FromArgb(50, 107, 74);
-            label1.Font = new Font("Montserrat Black", 9.749999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 9.749999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Control;
             label1.Location = new Point(48, 32);
             label1.Name = "label1";
-            label1.Size = new Size(133, 20);
+            label1.Size = new Size(130, 16);
             label1.TabIndex = 0;
             label1.Text = "Sinar Mulia Group";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -84,7 +84,7 @@
             // 
             btnabout.FlatAppearance.BorderSize = 0;
             btnabout.FlatStyle = FlatStyle.Flat;
-            btnabout.Font = new Font("Paytone One", 11.999999F);
+            btnabout.Font = new Font("Microsoft Sans Serif", 11.999999F);
             btnabout.ForeColor = Color.FromArgb(50, 107, 74);
             btnabout.Image = (Image)resources.GetObject("btnabout.Image");
             btnabout.Location = new Point(-31, 159);
@@ -102,7 +102,7 @@
             // 
             btnriwayat.FlatAppearance.BorderSize = 0;
             btnriwayat.FlatStyle = FlatStyle.Flat;
-            btnriwayat.Font = new Font("Paytone One", 11.999999F);
+            btnriwayat.Font = new Font("Microsoft Sans Serif", 11.999999F);
             btnriwayat.ForeColor = Color.FromArgb(50, 107, 74);
             btnriwayat.Image = (Image)resources.GetObject("btnriwayat.Image");
             btnriwayat.Location = new Point(-11, 112);
@@ -121,7 +121,7 @@
             // 
             btnkelolapermintaan.FlatAppearance.BorderSize = 0;
             btnkelolapermintaan.FlatStyle = FlatStyle.Flat;
-            btnkelolapermintaan.Font = new Font("Paytone One", 11.249999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnkelolapermintaan.Font = new Font("Microsoft Sans Serif", 11.249999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnkelolapermintaan.ForeColor = Color.FromArgb(50, 107, 74);
             btnkelolapermintaan.Image = (Image)resources.GetObject("btnkelolapermintaan.Image");
             btnkelolapermintaan.Location = new Point(0, 65);
@@ -130,7 +130,7 @@
             btnkelolapermintaan.Padding = new Padding(10, 0, 10, 0);
             btnkelolapermintaan.Size = new Size(212, 39);
             btnkelolapermintaan.TabIndex = 2;
-            btnkelolapermintaan.Text = "Kelola Permintaan";
+            btnkelolapermintaan.Text = "Ajukan Permintaan";
             btnkelolapermintaan.TextAlign = ContentAlignment.MiddleRight;
             btnkelolapermintaan.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnkelolapermintaan.UseVisualStyleBackColor = true;

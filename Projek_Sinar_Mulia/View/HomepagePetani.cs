@@ -27,6 +27,7 @@ namespace Projek_Sinar_Mulia
         private void btnkelolapermintaan_Click(object sender, EventArgs e)
         {
             MoveIndicator(btnkelolapermintaan);
+            UCMasuk(new AjukanPermintaan());
             //UCMasuk(new UCkelolapermintaan());
         }
 
