@@ -28,7 +28,7 @@ namespace Projek_Sinar_Mulia
         {
             string username = tbusername.Text;
             string password = tbpassword.Text;
-            string no_telephone = tbnotelp.Text;
+            string no_telp = tbnotelp.Text;
             string validasi = tbvalidasi.Text;
 
             if (password != validasi)
@@ -36,17 +36,12 @@ namespace Projek_Sinar_Mulia
                 MessageBox.Show("Password dan Konfirmasi Password tidak sama!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (PetaniController.CekUsername(username) || OperatorController.CekUsername(username))
+            if (UserController.CekUsername(username))
             {
                 MessageBox.Show("Username sudah digunakan!. Silakan pilih username yang lain!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }
-            if (PetaniController.CekNoTelp(no_telephone) || OperatorController.CekNoTelp(no_telephone))
-            {
-                MessageBox.Show("Nomor Telepon sudah digunakan!. Gunakan nomor telepon yang lain!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (PetaniController.HanyaAngka(no_telephone) || no_telephone.Length < 10 || no_telephone.Length > 13)
+            }            
+            if (!UserController.HanyaAngka(no_telp) || no_telp.Length < 10 || no_telp.Length > 13)
             {
                 MessageBox.Show("Nomor Telepon tidak valid!. Gunakan nomor telepon yang valid!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -54,20 +49,20 @@ namespace Projek_Sinar_Mulia
             if (string.IsNullOrWhiteSpace(username) ||
                 string.IsNullOrWhiteSpace(password) ||
                 string.IsNullOrWhiteSpace(validasi) ||
-                string.IsNullOrWhiteSpace(no_telephone))
+                string.IsNullOrWhiteSpace(no_telp))
             {
                 MessageBox.Show("Input tidak boleh kosong!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            var newPetani = new PetaniModel
+            var newUser = new UserModel
             {
                 username = tbusername.Text,
                 password = tbpassword.Text,
-                no_telephone = tbnotelp.Text,
+                no_telp = tbnotelp.Text,
             };
 
-            PetaniController.InsertPetani(newPetani);
+            UserController.InsertUsers(newUser);
             MessageBox.Show("Registrasi berhasil!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             var login = new Login();
             login.Show();

@@ -32,7 +32,7 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             picindikator = new PictureBox();
-            btnabout = new Button();
+            btnlahan = new Button();
             btnriwayat = new Button();
             btnkelolapermintaan = new Button();
             panel1 = new Panel();
@@ -80,23 +80,23 @@
             picindikator.Visible = false;
             picindikator.Click += picindikator_Click_1;
             // 
-            // btnabout
+            // btnlahan
             // 
-            btnabout.FlatAppearance.BorderSize = 0;
-            btnabout.FlatStyle = FlatStyle.Flat;
-            btnabout.Font = new Font("Microsoft Sans Serif", 11.999999F);
-            btnabout.ForeColor = Color.FromArgb(50, 107, 74);
-            btnabout.Image = (Image)resources.GetObject("btnabout.Image");
-            btnabout.Location = new Point(-31, 159);
-            btnabout.Margin = new Padding(0);
-            btnabout.Name = "btnabout";
-            btnabout.Padding = new Padding(10, 0, 10, 0);
-            btnabout.Size = new Size(261, 39);
-            btnabout.TabIndex = 4;
-            btnabout.Text = "About";
-            btnabout.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnabout.UseVisualStyleBackColor = true;
-            btnabout.Click += btnabout_Click;
+            btnlahan.FlatAppearance.BorderSize = 0;
+            btnlahan.FlatStyle = FlatStyle.Flat;
+            btnlahan.Font = new Font("Microsoft Sans Serif", 11.999999F);
+            btnlahan.ForeColor = Color.FromArgb(50, 107, 74);
+            btnlahan.Image = (Image)resources.GetObject("btnlahan.Image");
+            btnlahan.Location = new Point(-20, 159);
+            btnlahan.Margin = new Padding(0);
+            btnlahan.Name = "btnlahan";
+            btnlahan.Padding = new Padding(10, 0, 10, 0);
+            btnlahan.Size = new Size(261, 39);
+            btnlahan.TabIndex = 4;
+            btnlahan.Text = "Lahan";
+            btnlahan.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnlahan.UseVisualStyleBackColor = true;
+            btnlahan.Click += btnlahan_Click;
             // 
             // btnriwayat
             // 
@@ -158,7 +158,7 @@
             pnlsidebar.Controls.Add(pictureBox1);
             pnlsidebar.Controls.Add(label1);
             pnlsidebar.Controls.Add(panel2);
-            pnlsidebar.Controls.Add(btnabout);
+            pnlsidebar.Controls.Add(btnlahan);
             pnlsidebar.Controls.Add(btnriwayat);
             pnlsidebar.Controls.Add(btnkelolapermintaan);
             pnlsidebar.Dock = DockStyle.Left;
@@ -197,7 +197,7 @@
         private PictureBox pictureBox1;
         private Label label1;
         private PictureBox picindikator;
-        private Button btnabout;
+        private Button btnlahan;
         private Button btnriwayat;
         private Button btnkelolapermintaan;
         private Panel panel1;

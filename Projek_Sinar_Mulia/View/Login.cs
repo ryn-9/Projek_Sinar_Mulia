@@ -15,26 +15,38 @@ namespace Projek_Sinar_Mulia
             string username = tbusername.Text;
             string password = tbpassword.Text;
 
-            if (OperatorController.Login(username, password))
-            {
-                MessageBox.Show("Login sebagai Operator");
-                var form = new HomepageOperator();
-                form.Show();
-                this.Hide();
-                return;
-            }
+            int? roleId = UserController.GetRoleId(username, password);
 
-            if (PetaniController.Login(username, password))
+            if (roleId == 1)
             {
                 MessageBox.Show("Login sebagai Petani");
                 var form = new HomepagePetani();
                 form.Show();
                 this.Hide();
-                return;
+            }
+            else if (roleId == 2)
+            {
+                MessageBox.Show("Login sebagai Operator");
+                var form = new HomepageOperator();
+                form.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Username atau Password salah!", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            //if (PetaniController.Login(username, password))
+            //{
+            //    MessageBox.Show("Login sebagai Petani");
+            //    var form = new HomepagePetani();
+            //    form.Show();
+            //    this.Hide();
+            //    return;
+            //}
+
             // Kalau dua-duanya gagal
-            MessageBox.Show("Username atau Password salah!", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //MessageBox.Show("Username atau Password salah!", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             //bool success = UserValid.Login(username, password);
             //if (success)

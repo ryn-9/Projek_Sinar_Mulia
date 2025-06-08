@@ -37,9 +37,9 @@ namespace Projek_Sinar_Mulia
             UCMasuk(new Riwayat());
         }
 
-        private void btnabout_Click(object sender, EventArgs e)
+        private void btnlahan_Click(object sender, EventArgs e)
         {
-            MoveIndicator(btnabout);
+            MoveIndicator(btnlahan);
             //UCMasuk(new UCabout());
         }
         private void UCMasuk(UserControl uc)
