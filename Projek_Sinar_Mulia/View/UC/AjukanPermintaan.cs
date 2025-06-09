@@ -15,6 +15,7 @@ namespace Projek_Sinar_Mulia
         public AjukanPermintaan()
         {
             InitializeComponent();
+            this.Load += new EventHandler(UserControl_Load);
         }
 
         private void tbLokasi_TextChanged_1(object sender, EventArgs e)
@@ -38,6 +39,21 @@ namespace Projek_Sinar_Mulia
         private void lbLokasi_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbLokasi_SelectedIndexChanged(object sender, EventArgs e)
+        {      
+
+        }
+        private void UserControl_Load(object sender, EventArgs e)
+        {
+            var alamatService = new AlamatService();
+            var list = alamatService.GetAllAlamatGabungan();
+
+            cbLokasi.DataSource = list;
+            cbLokasi.DisplayMember = "DisplayLabel";
+            cbLokasi.ValueMember = "id_alamat";
+            cbLokasi.SelectedIndex = -1;
         }
     }
 }

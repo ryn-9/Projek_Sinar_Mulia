@@ -37,6 +37,40 @@ namespace Projek_Sinar_Mulia
             }
             return list;
         }
+        public List<AlamatModel> GetAllAlamatGabungan()
+        {
+            var list = new List<AlamatModel>();
+
+            // Contoh ambil dari join (bisa pakai SQL atau manual mapping dari 3 tabel)
+            using var conn = Database.GetConnection();
+            {
+                conn.Open();
+                var cmd = new NpgsqlCommand(@"
+            SELECT a.id_alamat, a.blok, a.id_jalan,
+                   j.jalan, rt.rt, rw.rw
+            FROM alamat a
+            JOIN jalan j ON a.id_jalan = j.id_jalan
+            JOIN rt ON j.id_rt = rt.id_rt
+            JOIN rw ON rt.id_rw = rw.id_rw", conn);
+
+                var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    list.Add(new AlamatModel
+                    {
+                        id_alamat = reader.GetInt32(0),
+                        blok = reader.GetString(1),
+                        id_jalan = reader.GetInt32(2),
+                        jalan = reader.GetString(3),
+                        rt = reader.GetInt32(4),
+                        rw = reader.GetInt32(5),
+                    });
+                }
+            }
+
+            return list;
+        }
+
     }
 }
 

@@ -11,6 +11,17 @@ namespace Projek_Sinar_Mulia
         public int id_alamat { get; set; }
         public string blok { get; set; }
         public int id_jalan { get; set; }
-        public override string ToString() => $"Blok {blok}";
+        public string jalan { get; set; }
+        public  int rt { get; set; }
+        public int rw { get; set; }
+
+        public string DisplayLabel
+        {
+            get
+            {
+                return $"RW {rw} - RT {rt} - {jalan} Blok {blok}";
+            }
+        }
+        public override string ToString() => $"RW {rw} - RT {rt} - {jalan} Blok {blok}";
     }
 }
