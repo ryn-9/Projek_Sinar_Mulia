@@ -28,7 +28,8 @@ namespace Projek_Sinar_Mulia.View.UC
             cbRW.DisplayMember = "rw";
             cbRW.ValueMember = "id_rw";
 
-            // Kosongkan RT dan Jalan saat awal
+            cbRW.SelectedIndex = -1;
+
             cbRT.DataSource = null;
             cbJalan.DataSource = null;
         }
@@ -42,6 +43,7 @@ namespace Projek_Sinar_Mulia.View.UC
                 cbRT.DataSource = rtService.GetRtByRw(selectedRW.id_rw);
                 cbRT.DisplayMember = "rt";
                 cbRT.ValueMember = "id_rt";
+                cbRT.SelectedIndex = -1;
                 cbJalan.DataSource = null;
             }
         }
@@ -54,6 +56,7 @@ namespace Projek_Sinar_Mulia.View.UC
                 cbJalan.DataSource = jalanService.GetJalanByRt(selectedRT.id_rt);
                 cbJalan.DisplayMember = "jalan";
                 cbJalan.ValueMember = "id_jalan";
+                cbJalan.SelectedIndex = -1;
             }
         }
 
