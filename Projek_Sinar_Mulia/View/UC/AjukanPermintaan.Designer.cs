@@ -139,7 +139,7 @@
             lbDurasi.Name = "lbDurasi";
             lbDurasi.Size = new Size(162, 15);
             lbDurasi.TabIndex = 12;
-            lbDurasi.Text = "Masukkan Durasi Irigasi";
+            lbDurasi.Text = "Masukkan Durasi Irigasi (Menit)";
             // 
             // cbLokasi
             // 
