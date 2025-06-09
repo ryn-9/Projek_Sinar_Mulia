@@ -46,12 +46,11 @@ namespace Projek_Sinar_Mulia
             {
                 conn.Open();
                 var cmd = new NpgsqlCommand(@"
-            SELECT a.id_alamat, a.blok, a.id_jalan,
-                   j.jalan, rt.rt, rw.rw
-            FROM alamat a
-            JOIN jalan j ON a.id_jalan = j.id_jalan
-            JOIN rt ON j.id_rt = rt.id_rt
-            JOIN rw ON rt.id_rw = rw.id_rw", conn);
+                    SELECT a.id_alamat, a.blok, a.id_jalan,j.jalan, rt.rt, rw.rw
+                    FROM alamat a
+                    JOIN jalan j ON a.id_jalan = j.id_jalan
+                    JOIN rt ON j.id_rt = rt.id_rt
+                    JOIN rw ON rt.id_rw = rw.id_rw", conn);
 
                 var reader = cmd.ExecuteReader();
                 while (reader.Read())
