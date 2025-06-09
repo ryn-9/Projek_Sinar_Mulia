@@ -16,6 +16,9 @@ namespace Projek_Sinar_Mulia.View.UC
         public TambahLahan()
         {
             InitializeComponent();
+            this.Load += new System.EventHandler(this.UserControl_Load);
+            cbRW.SelectedIndexChanged += new EventHandler(cbRW_SelectedIndexChanged);
+            cbRT.SelectedIndexChanged += new EventHandler(cbRT_SelectedIndexChanged);
 
         }
         private void UserControl_Load(object sender, EventArgs e)
@@ -32,19 +35,20 @@ namespace Projek_Sinar_Mulia.View.UC
 
         private void cbRW_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbRW.SelectedItem is RWModel selectedRW)
+            var selectedRW = cbRW.SelectedItem as RWModel;
+            if (selectedRW != null)
             {
                 var rtService = new RTService();
                 cbRT.DataSource = rtService.GetRtByRw(selectedRW.id_rw);
                 cbRT.DisplayMember = "rt";
                 cbRT.ValueMember = "id_rt";
-
                 cbJalan.DataSource = null;
             }
         }
         private void cbRT_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbRT.SelectedItem is RTModel selectedRT)
+            var selectedRT = cbRT.SelectedItem as RTModel;
+            if (selectedRT != null)
             {
                 var jalanService = new JalanService();
                 cbJalan.DataSource = jalanService.GetJalanByRt(selectedRT.id_rt);

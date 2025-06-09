@@ -40,6 +40,7 @@ namespace Projek_Sinar_Mulia
         private void btnlahan_Click(object sender, EventArgs e)
         {
             MoveIndicator(btnlahan);
+            UCMasuk(new TambahLahan());
             //UCMasuk(new UCabout());
         }
         private void UCMasuk(UserControl uc)
