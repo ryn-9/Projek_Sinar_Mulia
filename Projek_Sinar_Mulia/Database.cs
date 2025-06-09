@@ -12,7 +12,7 @@ namespace Projek_Sinar_Mulia
         private static string localhost = "localhost";
         private static string port = "5432";
         private static string username = "postgres";
-        private static string password = "";
+        private static string password = "babamamak55";
         private static string database = "PBO";
 
         private static NpgsqlConnection conn;

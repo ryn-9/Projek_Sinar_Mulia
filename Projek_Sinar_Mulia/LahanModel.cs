@@ -17,9 +17,7 @@ namespace Projek_Sinar_Mulia
         public int rt { get; set; }
         public int rw { get; set; }
 
-        public override string ToString()
-        {
-            return $"Blok {blok}, Jl. {jalan}, RT {rt}/RW {rw}";
-        }
+        public string DisplayLabel => $"Blok {blok}, Jl. {jalan}, RT {rt}/RW {rw}";
+
     }
 }
