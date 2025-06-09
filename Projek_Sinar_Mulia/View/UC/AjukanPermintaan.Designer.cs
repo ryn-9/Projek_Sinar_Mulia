@@ -137,9 +137,9 @@
             lbDurasi.ForeColor = Color.FromArgb(0, 64, 0);
             lbDurasi.Location = new Point(174, 234);
             lbDurasi.Name = "lbDurasi";
-            lbDurasi.Size = new Size(163, 14);
+            lbDurasi.Size = new Size(215, 14);
             lbDurasi.TabIndex = 12;
-            lbDurasi.Text = "Masukkan Durasi Irigasi";
+            lbDurasi.Text = "Masukkan Durasi Irigasi (Menit)";
             // 
             // cbLokasi
             // 
@@ -149,6 +149,7 @@
             cbLokasi.Name = "cbLokasi";
             cbLokasi.Size = new Size(307, 23);
             cbLokasi.TabIndex = 14;
+            cbLokasi.SelectedIndexChanged += cbLokasi_SelectedIndexChanged;
             // 
             // AjukanPermintaan
             // 
