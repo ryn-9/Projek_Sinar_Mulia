@@ -35,21 +35,21 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(104, 44);
-            dataGridView1.Margin = new Padding(2, 2, 2, 2);
+            dataGridView1.Location = new Point(19, 40);
+            dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(500, 306);
+            dataGridView1.Size = new Size(566, 306);
             dataGridView1.TabIndex = 0;
             // 
-            // UCRiwayat
+            // Riwayat
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(dataGridView1);
-            Margin = new Padding(2, 2, 2, 2);
-            Name = "UCRiwayat";
-            Size = new Size(688, 437);
+            Margin = new Padding(2);
+            Name = "Riwayat";
+            Size = new Size(601, 429);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }

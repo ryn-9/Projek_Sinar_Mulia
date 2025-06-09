@@ -146,9 +146,9 @@
             // 
             // pnlutama
             // 
-            pnlutama.Location = new Point(187, 20);
+            pnlutama.Location = new Point(201, 20);
             pnlutama.Name = "pnlutama";
-            pnlutama.Size = new Size(615, 429);
+            pnlutama.Size = new Size(601, 429);
             pnlutama.TabIndex = 5;
             // 
             // pnlsidebar
@@ -184,6 +184,7 @@
             Controls.Add(pnlsidebar);
             Controls.Add(pnlutama);
             Name = "HomepagePetani";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Homepage Petani";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)picindikator).EndInit();
