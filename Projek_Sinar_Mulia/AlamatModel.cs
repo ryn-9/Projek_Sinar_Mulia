@@ -22,6 +22,5 @@ namespace Projek_Sinar_Mulia
                 return $"RW {rw} - RT {rt} - {jalan} Blok {blok}";
             }
         }
-        public override string ToString() => $"RW {rw} - RT {rt} - {jalan} Blok {blok}";
     }
 }
