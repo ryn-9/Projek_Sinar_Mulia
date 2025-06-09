@@ -15,7 +15,6 @@ namespace Projek_Sinar_Mulia
         public AjukanPermintaan()
         {
             InitializeComponent();
-<<<<<<< HEAD
             this.Load += new System.EventHandler(this.UserControl_Load);
         }
         private void AjukanPermintaan_Load(object sender, EventArgs e)
@@ -24,9 +23,6 @@ namespace Projek_Sinar_Mulia
             cbLokasi.DataSource = lahanService.GetAllLahan();
             cbLokasi.DisplayMember = "ToString"; // atau "id_lahan"
             cbLokasi.ValueMember = "id_lahan";
-=======
-            this.Load += new EventHandler(UserControl_Load);
->>>>>>> f852f9d0b83d961cb301cbff9009561c884a341a
         }
         private void tbLokasi_TextChanged_1(object sender, EventArgs e)
         {
@@ -71,28 +67,15 @@ namespace Projek_Sinar_Mulia
         }
 
         private void cbLokasi_SelectedIndexChanged(object sender, EventArgs e)
-<<<<<<< HEAD
-        {
-=======
         {      
->>>>>>> f852f9d0b83d961cb301cbff9009561c884a341a
 
         }
         private void UserControl_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             var LahanService = new LahanService();
             cbLokasi.DataSource = LahanService.GetAllLahan();
             cbLokasi.DisplayMember = "lahan";
             cbLokasi.ValueMember = "id_lahan";
-=======
-            var alamatService = new AlamatService();
-            var list = alamatService.GetAllAlamatGabungan();
-
-            cbLokasi.DataSource = list;
-            cbLokasi.DisplayMember = "DisplayLabel";
-            cbLokasi.ValueMember = "id_alamat";
->>>>>>> f852f9d0b83d961cb301cbff9009561c884a341a
             cbLokasi.SelectedIndex = -1;
         }
     }
