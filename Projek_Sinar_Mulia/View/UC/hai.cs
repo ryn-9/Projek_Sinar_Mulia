@@ -24,5 +24,10 @@ namespace Projek_Sinar_Mulia.View.UC
         {
 
         }
+
+        private void hai_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

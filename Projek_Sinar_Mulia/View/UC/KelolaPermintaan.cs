@@ -139,5 +139,10 @@ namespace Projek_Sinar_Mulia.View.UC
         {
 
         }
+
+        private void KelolaPermintaan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

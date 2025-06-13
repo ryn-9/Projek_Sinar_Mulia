@@ -28,61 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnKembali = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KelolaPermintaan));
             dataGridView1 = new DataGridView();
-            btnKelolaStatus = new Button();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // btnKembali
-            // 
-            btnKembali.Location = new Point(388, 373);
-            btnKembali.Margin = new Padding(2, 2, 2, 2);
-            btnKembali.Name = "btnKembali";
-            btnKembali.Size = new Size(165, 27);
-            btnKembali.TabIndex = 3;
-            btnKembali.Text = "Kembali";
-            btnKembali.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(94, 37);
-            dataGridView1.Margin = new Padding(2, 2, 2, 2);
+            dataGridView1.Location = new Point(38, 79);
+            dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(500, 306);
+            dataGridView1.Size = new Size(525, 271);
             dataGridView1.TabIndex = 2;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
-            // btnKelolaStatus
+            // label2
             // 
-            btnKelolaStatus.Location = new Point(147, 373);
-            btnKelolaStatus.Margin = new Padding(2, 2, 2, 2);
-            btnKelolaStatus.Name = "btnKelolaStatus";
-            btnKelolaStatus.Size = new Size(165, 27);
-            btnKelolaStatus.TabIndex = 4;
-            btnKelolaStatus.Text = "Kelola Status";
-            btnKelolaStatus.UseVisualStyleBackColor = true;
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Paytone One", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(14, 25);
+            label2.Name = "label2";
+            label2.Size = new Size(133, 31);
+            label2.TabIndex = 11;
+            label2.Text = "Permintaan";
             // 
             // KelolaPermintaan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(btnKelolaStatus);
-            Controls.Add(btnKembali);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            Controls.Add(label2);
             Controls.Add(dataGridView1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "KelolaPermintaan";
-            Size = new Size(688, 437);
+            Size = new Size(601, 429);
+            Load += KelolaPermintaan_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Button btnKembali;
         private DataGridView dataGridView1;
-        private Button btnKelolaStatus;
+        private Label label2;
     }
 }

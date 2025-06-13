@@ -64,18 +64,16 @@
             pnlsidebar.Controls.Add(panel3);
             pnlsidebar.Dock = DockStyle.Left;
             pnlsidebar.Location = new Point(0, 0);
-            pnlsidebar.Margin = new Padding(4, 5, 4, 5);
             pnlsidebar.Name = "pnlsidebar";
-            pnlsidebar.Size = new Size(286, 748);
+            pnlsidebar.Size = new Size(200, 449);
             pnlsidebar.TabIndex = 3;
             // 
             // picindicator
             // 
             picindicator.Image = (Image)resources.GetObject("picindicator.Image");
-            picindicator.Location = new Point(0, 102);
-            picindicator.Margin = new Padding(4, 5, 4, 5);
+            picindicator.Location = new Point(0, 61);
             picindicator.Name = "picindicator";
-            picindicator.Size = new Size(16, 75);
+            picindicator.Size = new Size(11, 42);
             picindicator.SizeMode = PictureBoxSizeMode.Zoom;
             picindicator.TabIndex = 12;
             picindicator.TabStop = false;
@@ -83,21 +81,22 @@
             // 
             // btnlogout
             // 
+            btnlogout.BackColor = Color.FromArgb(50, 107, 74);
             btnlogout.FlatAppearance.BorderSize = 0;
             btnlogout.FlatStyle = FlatStyle.Flat;
             btnlogout.Font = new Font("Paytone One", 11.999999F);
-            btnlogout.ForeColor = Color.FromArgb(50, 107, 74);
+            btnlogout.ForeColor = Color.White;
             btnlogout.Image = (Image)resources.GetObject("btnlogout.Image");
-            btnlogout.Location = new Point(-52, 683);
+            btnlogout.Location = new Point(0, 410);
             btnlogout.Margin = new Padding(0);
             btnlogout.Name = "btnlogout";
-            btnlogout.Padding = new Padding(14, 0, 14, 0);
-            btnlogout.Size = new Size(416, 65);
+            btnlogout.Padding = new Padding(10, 0, 10, 0);
+            btnlogout.Size = new Size(274, 39);
             btnlogout.TabIndex = 11;
             btnlogout.Text = "Logout";
             btnlogout.TextAlign = ContentAlignment.MiddleLeft;
             btnlogout.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnlogout.UseVisualStyleBackColor = true;
+            btnlogout.UseVisualStyleBackColor = false;
             btnlogout.Click += btnlogout_Click;
             // 
             // btnlihatriwayat
@@ -108,11 +107,11 @@
             btnlihatriwayat.Font = new Font("Paytone One", 11.999999F);
             btnlihatriwayat.ForeColor = Color.FromArgb(50, 107, 74);
             btnlihatriwayat.Image = (Image)resources.GetObject("btnlihatriwayat.Image");
-            btnlihatriwayat.Location = new Point(-17, 187);
+            btnlihatriwayat.Location = new Point(-12, 112);
             btnlihatriwayat.Margin = new Padding(0);
             btnlihatriwayat.Name = "btnlihatriwayat";
-            btnlihatriwayat.Padding = new Padding(14, 0, 14, 0);
-            btnlihatriwayat.Size = new Size(326, 65);
+            btnlihatriwayat.Padding = new Padding(10, 0, 10, 0);
+            btnlihatriwayat.Size = new Size(228, 39);
             btnlihatriwayat.TabIndex = 10;
             btnlihatriwayat.Text = "Lihat Riwayat";
             btnlihatriwayat.TextAlign = ContentAlignment.MiddleLeft;
@@ -124,10 +123,9 @@
             // 
             pictureBox2.BackColor = Color.FromArgb(50, 107, 74);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(19, 38);
-            pictureBox2.Margin = new Padding(4, 5, 4, 5);
+            pictureBox2.Location = new Point(13, 23);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(47, 55);
+            pictureBox2.Size = new Size(33, 33);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
@@ -139,11 +137,11 @@
             btnpermintaan.Font = new Font("Paytone One", 11.249999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnpermintaan.ForeColor = Color.FromArgb(50, 107, 74);
             btnpermintaan.Image = (Image)resources.GetObject("btnpermintaan.Image");
-            btnpermintaan.Location = new Point(-33, 107);
+            btnpermintaan.Location = new Point(-23, 64);
             btnpermintaan.Margin = new Padding(0);
             btnpermintaan.Name = "btnpermintaan";
-            btnpermintaan.Padding = new Padding(14, 0, 14, 0);
-            btnpermintaan.Size = new Size(387, 65);
+            btnpermintaan.Padding = new Padding(10, 0, 10, 0);
+            btnpermintaan.Size = new Size(271, 39);
             btnpermintaan.TabIndex = 3;
             btnpermintaan.Text = "Permintaan";
             btnpermintaan.TextAlign = ContentAlignment.MiddleLeft;
@@ -157,10 +155,9 @@
             label2.BackColor = Color.FromArgb(50, 107, 74);
             label2.Font = new Font("Montserrat Black", 9.749999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(70, 52);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(49, 31);
             label2.Name = "label2";
-            label2.Size = new Size(208, 31);
+            label2.Size = new Size(133, 20);
             label2.TabIndex = 7;
             label2.Text = "Sinar Mulia Group";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -168,10 +165,9 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(50, 107, 74);
-            panel3.Location = new Point(1, 32);
-            panel3.Margin = new Padding(4, 5, 4, 5);
+            panel3.Location = new Point(1, 19);
             panel3.Name = "panel3";
-            panel3.Size = new Size(286, 70);
+            panel3.Size = new Size(215, 42);
             panel3.TabIndex = 9;
             // 
             // pictureBox1
@@ -230,29 +226,28 @@
             // 
             panel1.BackColor = Color.Gainsboro;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1260, 33);
+            panel1.Size = new Size(882, 20);
             panel1.TabIndex = 1;
             // 
             // pnlutama
             // 
-            pnlutama.Location = new Point(267, 33);
-            pnlutama.Margin = new Padding(4, 5, 4, 5);
+            pnlutama.Location = new Point(199, 20);
             pnlutama.Name = "pnlutama";
-            pnlutama.Size = new Size(879, 715);
+            pnlutama.Size = new Size(601, 429);
             pnlutama.TabIndex = 2;
             pnlutama.Paint += pnlutama_Paint;
             // 
             // HomepageOperator
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1143, 748);
+            ClientSize = new Size(800, 449);
             Controls.Add(panel1);
             Controls.Add(pnlsidebar);
             Controls.Add(pnlutama);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(2);
             Name = "HomepageOperator";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Homepage Operator";
