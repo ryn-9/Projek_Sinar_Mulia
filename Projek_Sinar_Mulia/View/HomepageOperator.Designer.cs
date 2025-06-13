@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomepageOperator));
             pnlsidebar = new Panel();
-            btnabout = new Button();
-            btnlihatstatus = new Button();
+            picindicator = new PictureBox();
+            btnlogout = new Button();
+            btnlihatriwayat = new Button();
             pictureBox2 = new PictureBox();
             btnpermintaan = new Button();
             label2 = new Label();
@@ -44,75 +45,89 @@
             btnkelolapermintaan = new Button();
             panel1 = new Panel();
             pnlutama = new Panel();
-            picindicator = new PictureBox();
             pnlsidebar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picindicator).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picindikator).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picindicator).BeginInit();
             SuspendLayout();
             // 
             // pnlsidebar
             // 
             pnlsidebar.BackColor = Color.LightGreen;
             pnlsidebar.Controls.Add(picindicator);
-            pnlsidebar.Controls.Add(btnabout);
-            pnlsidebar.Controls.Add(btnlihatstatus);
+            pnlsidebar.Controls.Add(btnlogout);
+            pnlsidebar.Controls.Add(btnlihatriwayat);
             pnlsidebar.Controls.Add(pictureBox2);
             pnlsidebar.Controls.Add(btnpermintaan);
             pnlsidebar.Controls.Add(label2);
             pnlsidebar.Controls.Add(panel3);
             pnlsidebar.Dock = DockStyle.Left;
             pnlsidebar.Location = new Point(0, 0);
+            pnlsidebar.Margin = new Padding(4, 5, 4, 5);
             pnlsidebar.Name = "pnlsidebar";
-            pnlsidebar.Size = new Size(200, 449);
+            pnlsidebar.Size = new Size(286, 748);
             pnlsidebar.TabIndex = 3;
             // 
-            // btnabout
+            // picindicator
             // 
-            btnabout.FlatAppearance.BorderSize = 0;
-            btnabout.FlatStyle = FlatStyle.Flat;
-            btnabout.Font = new Font("Paytone One", 11.999999F);
-            btnabout.ForeColor = Color.FromArgb(50, 107, 74);
-            btnabout.Image = (Image)resources.GetObject("btnabout.Image");
-            btnabout.Location = new Point(-38, 159);
-            btnabout.Margin = new Padding(0);
-            btnabout.Name = "btnabout";
-            btnabout.Padding = new Padding(10, 0, 10, 0);
-            btnabout.Size = new Size(291, 39);
-            btnabout.TabIndex = 11;
-            btnabout.Text = "About";
-            btnabout.TextAlign = ContentAlignment.MiddleLeft;
-            btnabout.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnabout.UseVisualStyleBackColor = true;
-            btnabout.Click += btnabout_Click;
+            picindicator.Image = (Image)resources.GetObject("picindicator.Image");
+            picindicator.Location = new Point(0, 102);
+            picindicator.Margin = new Padding(4, 5, 4, 5);
+            picindicator.Name = "picindicator";
+            picindicator.Size = new Size(16, 75);
+            picindicator.SizeMode = PictureBoxSizeMode.Zoom;
+            picindicator.TabIndex = 12;
+            picindicator.TabStop = false;
+            picindicator.Visible = false;
             // 
-            // btnlihatstatus
+            // btnlogout
             // 
-            btnlihatstatus.FlatAppearance.BorderSize = 0;
-            btnlihatstatus.FlatStyle = FlatStyle.Flat;
-            btnlihatstatus.Font = new Font("Paytone One", 11.999999F);
-            btnlihatstatus.ForeColor = Color.FromArgb(50, 107, 74);
-            btnlihatstatus.Image = (Image)resources.GetObject("btnlihatstatus.Image");
-            btnlihatstatus.Location = new Point(-12, 112);
-            btnlihatstatus.Margin = new Padding(0);
-            btnlihatstatus.Name = "btnlihatstatus";
-            btnlihatstatus.Padding = new Padding(10, 0, 10, 0);
-            btnlihatstatus.Size = new Size(228, 39);
-            btnlihatstatus.TabIndex = 10;
-            btnlihatstatus.Text = "Lihat Status";
-            btnlihatstatus.TextAlign = ContentAlignment.MiddleLeft;
-            btnlihatstatus.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnlihatstatus.UseVisualStyleBackColor = true;
-            btnlihatstatus.Click += btnlihatstatus_Click;
+            btnlogout.FlatAppearance.BorderSize = 0;
+            btnlogout.FlatStyle = FlatStyle.Flat;
+            btnlogout.Font = new Font("Paytone One", 11.999999F);
+            btnlogout.ForeColor = Color.FromArgb(50, 107, 74);
+            btnlogout.Image = (Image)resources.GetObject("btnlogout.Image");
+            btnlogout.Location = new Point(-52, 683);
+            btnlogout.Margin = new Padding(0);
+            btnlogout.Name = "btnlogout";
+            btnlogout.Padding = new Padding(14, 0, 14, 0);
+            btnlogout.Size = new Size(416, 65);
+            btnlogout.TabIndex = 11;
+            btnlogout.Text = "Logout";
+            btnlogout.TextAlign = ContentAlignment.MiddleLeft;
+            btnlogout.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnlogout.UseVisualStyleBackColor = true;
+            btnlogout.Click += btnlogout_Click;
+            // 
+            // btnlihatriwayat
+            // 
+            btnlihatriwayat.AccessibleDescription = "";
+            btnlihatriwayat.FlatAppearance.BorderSize = 0;
+            btnlihatriwayat.FlatStyle = FlatStyle.Flat;
+            btnlihatriwayat.Font = new Font("Paytone One", 11.999999F);
+            btnlihatriwayat.ForeColor = Color.FromArgb(50, 107, 74);
+            btnlihatriwayat.Image = (Image)resources.GetObject("btnlihatriwayat.Image");
+            btnlihatriwayat.Location = new Point(-17, 187);
+            btnlihatriwayat.Margin = new Padding(0);
+            btnlihatriwayat.Name = "btnlihatriwayat";
+            btnlihatriwayat.Padding = new Padding(14, 0, 14, 0);
+            btnlihatriwayat.Size = new Size(326, 65);
+            btnlihatriwayat.TabIndex = 10;
+            btnlihatriwayat.Text = "Lihat Riwayat";
+            btnlihatriwayat.TextAlign = ContentAlignment.MiddleLeft;
+            btnlihatriwayat.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnlihatriwayat.UseVisualStyleBackColor = true;
+            btnlihatriwayat.Click += btnlihatriwayat_Click;
             // 
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.FromArgb(50, 107, 74);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(13, 23);
+            pictureBox2.Location = new Point(19, 38);
+            pictureBox2.Margin = new Padding(4, 5, 4, 5);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(33, 33);
+            pictureBox2.Size = new Size(47, 55);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
@@ -124,11 +139,11 @@
             btnpermintaan.Font = new Font("Paytone One", 11.249999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnpermintaan.ForeColor = Color.FromArgb(50, 107, 74);
             btnpermintaan.Image = (Image)resources.GetObject("btnpermintaan.Image");
-            btnpermintaan.Location = new Point(-23, 64);
+            btnpermintaan.Location = new Point(-33, 107);
             btnpermintaan.Margin = new Padding(0);
             btnpermintaan.Name = "btnpermintaan";
-            btnpermintaan.Padding = new Padding(10, 0, 10, 0);
-            btnpermintaan.Size = new Size(271, 39);
+            btnpermintaan.Padding = new Padding(14, 0, 14, 0);
+            btnpermintaan.Size = new Size(387, 65);
             btnpermintaan.TabIndex = 3;
             btnpermintaan.Text = "Permintaan";
             btnpermintaan.TextAlign = ContentAlignment.MiddleLeft;
@@ -142,9 +157,10 @@
             label2.BackColor = Color.FromArgb(50, 107, 74);
             label2.Font = new Font("Montserrat Black", 9.749999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(49, 31);
+            label2.Location = new Point(70, 52);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(133, 20);
+            label2.Size = new Size(208, 31);
             label2.TabIndex = 7;
             label2.Text = "Sinar Mulia Group";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -152,9 +168,10 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(50, 107, 74);
-            panel3.Location = new Point(1, 19);
+            panel3.Location = new Point(1, 32);
+            panel3.Margin = new Padding(4, 5, 4, 5);
             panel3.Name = "panel3";
-            panel3.Size = new Size(200, 42);
+            panel3.Size = new Size(286, 70);
             panel3.TabIndex = 9;
             // 
             // pictureBox1
@@ -213,49 +230,39 @@
             // 
             panel1.BackColor = Color.Gainsboro;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(882, 20);
+            panel1.Size = new Size(1260, 33);
             panel1.TabIndex = 1;
             // 
             // pnlutama
             // 
-            pnlutama.Location = new Point(187, 20);
+            pnlutama.Location = new Point(267, 33);
+            pnlutama.Margin = new Padding(4, 5, 4, 5);
             pnlutama.Name = "pnlutama";
-            pnlutama.Size = new Size(615, 429);
+            pnlutama.Size = new Size(879, 715);
             pnlutama.TabIndex = 2;
             pnlutama.Paint += pnlutama_Paint;
             // 
-            // picindicator
-            // 
-            picindicator.Image = (Image)resources.GetObject("picindicator.Image");
-            picindicator.Location = new Point(0, 61);
-            picindicator.Name = "picindicator";
-            picindicator.Size = new Size(11, 45);
-            picindicator.SizeMode = PictureBoxSizeMode.Zoom;
-            picindicator.TabIndex = 12;
-            picindicator.TabStop = false;
-            picindicator.Visible = false;
-            // 
             // HomepageOperator
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 449);
+            ClientSize = new Size(1143, 748);
             Controls.Add(panel1);
             Controls.Add(pnlsidebar);
             Controls.Add(pnlutama);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(2);
             Name = "HomepageOperator";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Homepage Operator";
             Load += HomepageOperator_Load;
             pnlsidebar.ResumeLayout(false);
             pnlsidebar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picindicator).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)picindikator).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picindicator).EndInit();
             ResumeLayout(false);
         }
 
@@ -265,7 +272,7 @@
         private PictureBox pictureBox1;
         private Label label1;
         private Button btnkelolapermintaan;
-        private Button btnabout;
+        private Button btnlogout;
         private Button btnriwayat;
         private PictureBox picindikator;
         private Panel panel1;
@@ -275,7 +282,7 @@
         private PictureBox pictureBox2;
         private Label label2;
         private Panel panel3;
-        private Button btnlihatstatus;
+        private Button btnlihatriwayat;
         private PictureBox picindicator;
     }
 }

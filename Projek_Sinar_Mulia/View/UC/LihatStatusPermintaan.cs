@@ -25,7 +25,7 @@ namespace Projek_Sinar_Mulia
         }
         private void LoadRiwayatData()
         {
-            string connString = "Host=localhost;Port=5432;Username=postgres;Password=dinadin;Database=sinarmulia";
+            string connString = "Host=localhost;Port=5432;Username=postgres;Password=babamamak55;Database=PBO";
             using (NpgsqlConnection conn = new NpgsqlConnection(connString))
             {
                 try

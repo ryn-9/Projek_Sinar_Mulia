@@ -1,5 +1,6 @@
 using Microsoft.VisualBasic.ApplicationServices;
 using Projek_Sinar_Mulia.View;
+using Projek_Sinar_Mulia;
 
 namespace Projek_Sinar_Mulia
 {
@@ -28,14 +29,14 @@ namespace Projek_Sinar_Mulia
                     MessageBox.Show("Login sebagai Petani");
 
                     // Gunakan userId.Value di sini
-                    var form = new HomepagePetani(userId.Value);
+                    var form = new HomepagePetani(userId.Value, username);
                     form.Show();
                     this.Hide();
                 }
                 else if (roleId.Value == 2)
                 {
                     MessageBox.Show("Login sebagai Operator");
-                    var form = new HomepageOperator();
+                    var form = new HomepageOperator(username);
                     form.Show();
                     this.Hide();
                 }

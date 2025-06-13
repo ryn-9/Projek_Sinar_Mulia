@@ -65,9 +65,10 @@
             btnRegister.FlatStyle = FlatStyle.Flat;
             btnRegister.Font = new Font("Dubai", 8.999999F, FontStyle.Bold);
             btnRegister.ForeColor = SystemColors.ControlLightLight;
-            btnRegister.Location = new Point(466, 331);
+            btnRegister.Location = new Point(666, 552);
+            btnRegister.Margin = new Padding(4, 5, 4, 5);
             btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(120, 36);
+            btnRegister.Size = new Size(171, 60);
             btnRegister.TabIndex = 13;
             btnRegister.Text = "Register";
             btnRegister.UseVisualStyleBackColor = false;
@@ -78,9 +79,10 @@
             tbpassword.BackColor = Color.Gainsboro;
             tbpassword.BorderStyle = BorderStyle.None;
             tbpassword.Font = new Font("Arial Rounded MT Bold", 9F);
-            tbpassword.Location = new Point(325, 187);
+            tbpassword.Location = new Point(464, 314);
+            tbpassword.Margin = new Padding(4, 5, 4, 5);
             tbpassword.Name = "tbpassword";
-            tbpassword.Size = new Size(258, 14);
+            tbpassword.Size = new Size(369, 21);
             tbpassword.TabIndex = 10;
             // 
             // tbusername
@@ -88,9 +90,10 @@
             tbusername.BackColor = Color.Gainsboro;
             tbusername.BorderStyle = BorderStyle.None;
             tbusername.Font = new Font("Arial Rounded MT Bold", 9F);
-            tbusername.Location = new Point(325, 114);
+            tbusername.Location = new Point(464, 189);
+            tbusername.Margin = new Padding(4, 5, 4, 5);
             tbusername.Name = "tbusername";
-            tbusername.Size = new Size(258, 14);
+            tbusername.Size = new Size(369, 21);
             tbusername.TabIndex = 9;
             // 
             // label1
@@ -99,9 +102,10 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Libre Bodoni", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(407, 30);
+            label1.Location = new Point(581, 50);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(89, 29);
+            label1.Size = new Size(131, 43);
             label1.TabIndex = 8;
             label1.Text = "Register";
             label1.Click += label1_Click;
@@ -111,9 +115,10 @@
             tbvalidasi.BackColor = Color.Gainsboro;
             tbvalidasi.BorderStyle = BorderStyle.None;
             tbvalidasi.Font = new Font("Arial Rounded MT Bold", 9F);
-            tbvalidasi.Location = new Point(325, 224);
+            tbvalidasi.Location = new Point(464, 374);
+            tbvalidasi.Margin = new Padding(4, 5, 4, 5);
             tbvalidasi.Name = "tbvalidasi";
-            tbvalidasi.Size = new Size(258, 14);
+            tbvalidasi.Size = new Size(369, 21);
             tbvalidasi.TabIndex = 14;
             tbvalidasi.TextChanged += tbvalidasi_TextChanged;
             // 
@@ -121,10 +126,9 @@
             // 
             cbintip1.AutoSize = true;
             cbintip1.BackColor = Color.Transparent;
-            cbintip1.Location = new Point(597, 189);
-            cbintip1.Margin = new Padding(2);
+            cbintip1.Location = new Point(853, 315);
             cbintip1.Name = "cbintip1";
-            cbintip1.Size = new Size(15, 14);
+            cbintip1.Size = new Size(22, 21);
             cbintip1.TabIndex = 16;
             cbintip1.UseVisualStyleBackColor = false;
             cbintip1.CheckedChanged += cbintip1_CheckedChanged;
@@ -133,10 +137,9 @@
             // 
             cbintip2.AutoSize = true;
             cbintip2.BackColor = Color.Transparent;
-            cbintip2.Location = new Point(597, 225);
-            cbintip2.Margin = new Padding(2);
+            cbintip2.Location = new Point(853, 375);
             cbintip2.Name = "cbintip2";
-            cbintip2.Size = new Size(15, 14);
+            cbintip2.Size = new Size(22, 21);
             cbintip2.TabIndex = 17;
             cbintip2.UseVisualStyleBackColor = false;
             cbintip2.CheckedChanged += cbintip2_CheckedChanged;
@@ -150,10 +153,9 @@
             btnkembali.FlatStyle = FlatStyle.Flat;
             btnkembali.Font = new Font("Dubai", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnkembali.ForeColor = SystemColors.ControlLightLight;
-            btnkembali.Location = new Point(325, 331);
-            btnkembali.Margin = new Padding(2);
+            btnkembali.Location = new Point(464, 552);
             btnkembali.Name = "btnkembali";
-            btnkembali.Size = new Size(120, 36);
+            btnkembali.Size = new Size(171, 60);
             btnkembali.TabIndex = 18;
             btnkembali.Text = "Kembali";
             btnkembali.UseVisualStyleBackColor = false;
@@ -163,10 +165,9 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(316, 107);
-            pictureBox1.Margin = new Padding(2);
+            pictureBox1.Location = new Point(451, 178);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(276, 26);
+            pictureBox1.Size = new Size(394, 43);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 19;
             pictureBox1.TabStop = false;
@@ -175,10 +176,9 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(315, 182);
-            pictureBox2.Margin = new Padding(2);
+            pictureBox2.Location = new Point(450, 303);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(276, 26);
+            pictureBox2.Size = new Size(394, 43);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 20;
             pictureBox2.TabStop = false;
@@ -187,10 +187,9 @@
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(315, 218);
-            pictureBox3.Margin = new Padding(2);
+            pictureBox3.Location = new Point(450, 363);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(276, 26);
+            pictureBox3.Size = new Size(394, 43);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 21;
             pictureBox3.TabStop = false;
@@ -200,10 +199,9 @@
             pictureBox4.BackColor = Color.Transparent;
             pictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(290, 221);
-            pictureBox4.Margin = new Padding(2);
+            pictureBox4.Location = new Point(414, 368);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(22, 19);
+            pictureBox4.Size = new Size(31, 32);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 23;
             pictureBox4.TabStop = false;
@@ -213,10 +211,9 @@
             pictureBox5.BackColor = Color.Transparent;
             pictureBox5.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(290, 110);
-            pictureBox5.Margin = new Padding(2);
+            pictureBox5.Location = new Point(414, 183);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(22, 19);
+            pictureBox5.Size = new Size(31, 32);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 22;
             pictureBox5.TabStop = false;
@@ -226,10 +223,9 @@
             pictureBox6.BackColor = Color.Transparent;
             pictureBox6.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(290, 184);
-            pictureBox6.Margin = new Padding(2);
+            pictureBox6.Location = new Point(414, 307);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(22, 19);
+            pictureBox6.Size = new Size(31, 32);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 24;
             pictureBox6.TabStop = false;
@@ -239,19 +235,19 @@
             tbnotelp.BackColor = Color.Gainsboro;
             tbnotelp.BorderStyle = BorderStyle.None;
             tbnotelp.Font = new Font("Arial Rounded MT Bold", 9F);
-            tbnotelp.Location = new Point(325, 154);
+            tbnotelp.Location = new Point(464, 254);
+            tbnotelp.Margin = new Padding(4, 5, 4, 5);
             tbnotelp.Name = "tbnotelp";
-            tbnotelp.Size = new Size(258, 14);
+            tbnotelp.Size = new Size(369, 21);
             tbnotelp.TabIndex = 25;
             // 
             // pictureBox7
             // 
             pictureBox7.BackColor = Color.Transparent;
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(316, 146);
-            pictureBox7.Margin = new Padding(2);
+            pictureBox7.Location = new Point(451, 243);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(276, 26);
+            pictureBox7.Size = new Size(394, 43);
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox7.TabIndex = 26;
             pictureBox7.TabStop = false;
@@ -260,20 +256,21 @@
             // 
             pictureBox8.BackColor = Color.Transparent;
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(292, 150);
+            pictureBox8.Location = new Point(417, 250);
+            pictureBox8.Margin = new Padding(4, 5, 4, 5);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(19, 18);
+            pictureBox8.Size = new Size(27, 30);
             pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox8.TabIndex = 27;
             pictureBox8.TabStop = false;
             // 
             // Register
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(881, 449);
+            ClientSize = new Size(1259, 748);
             Controls.Add(pictureBox8);
             Controls.Add(tbnotelp);
             Controls.Add(pictureBox7);
@@ -294,6 +291,7 @@
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Register";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Register";

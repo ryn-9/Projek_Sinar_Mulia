@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using Projek_Sinar_Mulia.View.UC;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 
 
@@ -18,10 +19,12 @@ namespace Projek_Sinar_Mulia.View
     public partial class HomepageOperator : Form
     {
         Panel panelIndicator;
-        public HomepageOperator()
+        private string currentUsername;
+        public HomepageOperator(string username)
         {
             InitializeComponent();
             picindicator.Visible = false;
+            currentUsername = username;
         }
         private void MoveIndicator(Control button)
         {
@@ -60,17 +63,20 @@ namespace Projek_Sinar_Mulia.View
 
         private void HomepageOperator_Load(object sender, EventArgs e)
         {
-
+            UCMasuk(new hai(currentUsername));
         }
 
-        private void btnlihatstatus_Click(object sender, EventArgs e)
+        private void btnlihatriwayat_Click(object sender, EventArgs e)
         {
-            MoveIndicator(btnlihatstatus);
+            MoveIndicator(btnlihatriwayat);
+            UCMasuk(new AllRiwayat());
         }
 
-        private void btnabout_Click(object sender, EventArgs e)
+        private void btnlogout_Click(object sender, EventArgs e)
         {
-            MoveIndicator(btnabout);
+            var loginForm = new Login();
+            loginForm.Show();
+            this.Close();
         }
     }
 }

@@ -16,18 +16,15 @@ namespace Projek_Sinar_Mulia
     {
         Panel panelIndicator;
         private int currentUserId;
-        private int UserId; // deklarasi variabel di atas class
+        private int UserId;
+        private string currentUsername;
 
-        public HomepagePetani(int idUser) // <- ini WAJIB ada
+        public HomepagePetani(int idUser, string username)
         {
             InitializeComponent();
             currentUserId = idUser;
-
-            // Load awal
-            var riwayatUC = new Riwayat(currentUserId);
-            riwayatUC.Dock = DockStyle.Fill;
-            pnlutama.Controls.Clear();
-            pnlutama.Controls.Add(riwayatUC);
+            currentUsername = username;
+            this.Load += new System.EventHandler(this.HomepagePetani_Load);
         }
 
 
@@ -41,14 +38,14 @@ namespace Projek_Sinar_Mulia
         private void btnkelolapermintaan_Click(object sender, EventArgs e)
         {
             MoveIndicator(btnkelolapermintaan);
-            UCMasuk(new AjukanPermintaan());
-            //UCMasuk(new UCkelolapermintaan());
+            UCMasuk(new AjukanPermintaan());            
         }
 
-        private void btnriwayat_Click(object sender, EventArgs e)
+        private void btnlogout_Click(object sender, EventArgs e)
         {
-            MoveIndicator(btnriwayat);
-            UCMasuk(new Riwayat(currentUserId));
+            var loginForm = new Login();
+            loginForm.Show();
+            this.Close();
         }
 
         private void btnlahan_Click(object sender, EventArgs e)
@@ -86,8 +83,12 @@ namespace Projek_Sinar_Mulia
 
         private void btnlihatstatus_Click(object sender, EventArgs e)
         {
-            MoveIndicator(btnkelolapermintaan);
+            MoveIndicator(btnlihatstatus);
             UCMasuk(new LihatStatusPermintaan());
+        }
+        private void HomepagePetani_Load(object sender, EventArgs e)
+        {
+            UCMasuk(new hai(currentUsername));
         }
     }
 }

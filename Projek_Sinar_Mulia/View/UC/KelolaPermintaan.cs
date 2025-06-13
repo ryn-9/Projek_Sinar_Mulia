@@ -8,7 +8,7 @@ namespace Projek_Sinar_Mulia.View.UC
 {
     public partial class KelolaPermintaan : UserControl
     {
-        private string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=;Database=PBO;";
+        private string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=babamamak55;Database=PBO;";
         private Dictionary<int, string> statusDict = new Dictionary<int, string>();
         private Dictionary<string, int> reverseStatusDict = new Dictionary<string, int>();
 

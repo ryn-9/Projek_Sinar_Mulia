@@ -35,19 +35,22 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(122, 100);
+            dataGridView1.Location = new Point(54, 163);
+            dataGridView1.Margin = new Padding(4, 5, 4, 5);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(525, 235);
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(750, 392);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // LihatStatusPermintaan
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(dataGridView1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "LihatStatusPermintaan";
-            Size = new Size(816, 488);
+            Size = new Size(859, 715);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
