@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Projek_Sinar_Mulia.View.UC;
+
+
 
 namespace Projek_Sinar_Mulia.View
 {
@@ -29,7 +32,9 @@ namespace Projek_Sinar_Mulia.View
         private void btnpermintaan_Click(object sender, EventArgs e)
         {
             MoveIndicator(btnpermintaan);
-            //UCMasuk(new UCkelolapermintaan());
+            UCMasuk(new KelolaPermintaan());
+
+
         }
         private void UCMasuk(UserControl uc)
         {

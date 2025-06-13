@@ -110,11 +110,11 @@
             // lbLokasi
             // 
             lbLokasi.AutoSize = true;
-            lbLokasi.Font = new Font("UD Digi Kyokasho NK-B", 9F, FontStyle.Bold, GraphicsUnit.Point, 128);
+            lbLokasi.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 128);
             lbLokasi.ForeColor = Color.FromArgb(0, 64, 0);
             lbLokasi.Location = new Point(173, 126);
             lbLokasi.Name = "lbLokasi";
-            lbLokasi.Size = new Size(79, 14);
+            lbLokasi.Size = new Size(80, 15);
             lbLokasi.TabIndex = 10;
             lbLokasi.Text = "Pilih Lahan";
             lbLokasi.Click += lbLokasi_Click;
@@ -122,22 +122,22 @@
             // lbTanggal
             // 
             lbTanggal.AutoSize = true;
-            lbTanggal.Font = new Font("UD Digi Kyokasho NK-B", 9F, FontStyle.Bold, GraphicsUnit.Point, 128);
+            lbTanggal.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 128);
             lbTanggal.ForeColor = Color.FromArgb(0, 64, 0);
             lbTanggal.Location = new Point(172, 180);
             lbTanggal.Name = "lbTanggal";
-            lbTanggal.Size = new Size(173, 14);
+            lbTanggal.Size = new Size(172, 15);
             lbTanggal.TabIndex = 11;
             lbTanggal.Text = "Masukkan Tanggal Irigasi";
             // 
             // lbDurasi
             // 
             lbDurasi.AutoSize = true;
-            lbDurasi.Font = new Font("UD Digi Kyokasho NP-B", 9F, FontStyle.Bold, GraphicsUnit.Point, 128);
+            lbDurasi.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 128);
             lbDurasi.ForeColor = Color.FromArgb(0, 64, 0);
             lbDurasi.Location = new Point(174, 234);
             lbDurasi.Name = "lbDurasi";
-            lbDurasi.Size = new Size(215, 14);
+            lbDurasi.Size = new Size(162, 15);
             lbDurasi.TabIndex = 12;
             lbDurasi.Text = "Masukkan Durasi Irigasi (Menit)";
             // 

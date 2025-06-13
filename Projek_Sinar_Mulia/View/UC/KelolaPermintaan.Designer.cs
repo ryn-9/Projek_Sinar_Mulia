@@ -1,6 +1,6 @@
 ﻿namespace Projek_Sinar_Mulia.View.UC
 {
-    partial class UCKelolaPermintaan
+    partial class KelolaPermintaan
     {
         /// <summary> 
         /// Required designer variable.
@@ -36,9 +36,10 @@
             // 
             // btnKembali
             // 
-            btnKembali.Location = new Point(554, 622);
+            btnKembali.Location = new Point(388, 373);
+            btnKembali.Margin = new Padding(2, 2, 2, 2);
             btnKembali.Name = "btnKembali";
-            btnKembali.Size = new Size(236, 45);
+            btnKembali.Size = new Size(165, 27);
             btnKembali.TabIndex = 3;
             btnKembali.Text = "Kembali";
             btnKembali.UseVisualStyleBackColor = true;
@@ -46,30 +47,34 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(134, 62);
+            dataGridView1.Location = new Point(94, 37);
+            dataGridView1.Margin = new Padding(2, 2, 2, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(715, 510);
+            dataGridView1.Size = new Size(500, 306);
             dataGridView1.TabIndex = 2;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
             // btnKelolaStatus
             // 
-            btnKelolaStatus.Location = new Point(210, 622);
+            btnKelolaStatus.Location = new Point(147, 373);
+            btnKelolaStatus.Margin = new Padding(2, 2, 2, 2);
             btnKelolaStatus.Name = "btnKelolaStatus";
-            btnKelolaStatus.Size = new Size(236, 45);
+            btnKelolaStatus.Size = new Size(165, 27);
             btnKelolaStatus.TabIndex = 4;
             btnKelolaStatus.Text = "Kelola Status";
             btnKelolaStatus.UseVisualStyleBackColor = true;
             // 
-            // UCKelolaPermintaan
+            // KelolaPermintaan
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(btnKelolaStatus);
             Controls.Add(btnKembali);
             Controls.Add(dataGridView1);
-            Name = "UCKelolaPermintaan";
-            Size = new Size(983, 728);
+            Margin = new Padding(2, 2, 2, 2);
+            Name = "KelolaPermintaan";
+            Size = new Size(688, 437);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
