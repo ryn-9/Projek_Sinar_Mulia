@@ -41,6 +41,7 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(566, 306);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Riwayat
             // 

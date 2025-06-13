@@ -75,6 +75,30 @@ namespace Projek_Sinar_Mulia
                 }
             }
         }
+        public static int? GetUserId(string username, string password)
+        {
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+                string query = "SELECT id_users FROM users WHERE username = @username AND password = @password";
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@password", password);
+
+                    var result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        return Convert.ToInt32(result);
+                    }
+                    else
+                    {
+                        return null; // user tidak ditemukan
+                    }
+                }
+            }
+        }
+
         public static void InsertUsers(UserModel user)
         {
             string query = $"INSERT INTO users(username, password, no_telp, id_roles) VALUES(@username, @password, @no_telp, 1)";

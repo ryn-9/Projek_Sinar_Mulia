@@ -8,29 +8,55 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace Projek_Sinar_Mulia.View.UC
 {
-    public partial class Riwayat: UserControl
+    public partial class Riwayat : UserControl
     {
-        public Riwayat()
+        private int UserId;
+        public Riwayat(int idUser)
         {
             InitializeComponent();
-            LoadRiwayatData();
+            UserId = idUser;
+            LoadRiwayatData(UserId);
         }
-        private void LoadRiwayatData()
+        private void LoadRiwayatData(int idUser)
         {
-            string connString = "Host=localhost;Port=5432;Username=postgres;Password=babamamak55;Database=PBO";
-            using (NpgsqlConnection conn = new NpgsqlConnection(connString))
+            using (NpgsqlConnection conn = Database.GetConnection())
             {
                 try
                 {
                     conn.Open();
-                    string query = "select pi.tgl_permintaan as \"Tanggal_Permintaan\", u.username as \"Petani\", l.luas as \"Luas\", a.blok as \"Blok\", j.jalan as \"Jalan\", rt.rt as \"RT\", rw.rw as \"RW\", s.status as \"Status\", d.durasi as \"durasi\"\r\nfrom permintaan_irigasi pi\r\njoin lahan l using(id_lahan)\r\njoin users u using(id_users)\r\njoin alamat a using(id_alamat)\r\njoin jalan j using(id_jalan)\r\njoin rt rt using(id_rt)\r\njoin rw rw using(id_rw)\r\njoin status s using(id_status)\r\njoin durasi d";
-                    NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(query, conn);
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    dataGridView1.DataSource = dt;
+                    string query = @"
+                SELECT 
+                    pi.tgl_permintaan AS ""Tanggal_Permintaan"", 
+                    u.username AS ""Petani"", 
+                    l.luas AS ""Luas"", 
+                    a.blok AS ""Blok"", 
+                    j.jalan AS ""Jalan"", 
+                    rt.rt AS ""RT"", 
+                    rw.rw AS ""RW"", 
+                    s.status AS ""Status""
+                FROM permintaan_irigasi pi
+                JOIN lahan l USING(id_lahan)
+                JOIN users u USING(id_users)
+                JOIN alamat a USING(id_alamat)
+                JOIN jalan j USING(id_jalan)
+                JOIN rt rt USING(id_rt)
+                JOIN rw rw USING(id_rw)
+                JOIN status s USING(id_status)
+                WHERE u.id_users = @id_users";
+
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id_users", idUser);
+
+                        NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        dataGridView1.DataSource = dt;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -40,5 +66,9 @@ namespace Projek_Sinar_Mulia.View.UC
         }
 
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -1,13 +1,16 @@
+using Microsoft.VisualBasic.ApplicationServices;
 using Projek_Sinar_Mulia.View;
 
 namespace Projek_Sinar_Mulia
 {
     public partial class Login : Form
     {
+        private int currentUserId;
         public Login()
         {
             InitializeComponent();
-            tbpassword.PasswordChar = '*';
+            tbpassword.PasswordChar = '*';            
+
 
         }
         private void btnLogin_Click(object sender, EventArgs e)
@@ -15,26 +18,57 @@ namespace Projek_Sinar_Mulia
             string username = tbusername.Text;
             string password = tbpassword.Text;
 
+            int? userId = UserController.GetUserId(username, password);
             int? roleId = UserController.GetRoleId(username, password);
 
-            if (roleId == 1)
+            if (userId.HasValue && roleId.HasValue)
             {
-                MessageBox.Show("Login sebagai Petani");
-                var form = new HomepagePetani();
-                form.Show();
-                this.Hide();
-            }
-            else if (roleId == 2)
-            {
-                MessageBox.Show("Login sebagai Operator");
-                var form = new HomepageOperator();
-                form.Show();
-                this.Hide();
+                if (roleId.Value == 1)
+                {
+                    MessageBox.Show("Login sebagai Petani");
+
+                    // Gunakan userId.Value di sini
+                    var form = new HomepagePetani(userId.Value);
+                    form.Show();
+                    this.Hide();
+                }
+                else if (roleId.Value == 2)
+                {
+                    MessageBox.Show("Login sebagai Operator");
+                    var form = new HomepageOperator();
+                    form.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Role tidak dikenali.");
+                }
             }
             else
             {
                 MessageBox.Show("Username atau Password salah!", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
+            //if (roleId == 1)
+            //{
+            //    MessageBox.Show("Login sebagai Petani");
+            //    var form = new HomepagePetani(userId); // ? tambahkan parameter
+            //    form.Show();
+            //    this.Hide();
+            //}
+
+            //else if (roleId == 2)
+            //{
+            //    MessageBox.Show("Login sebagai Operator");
+            //    var form = new HomepageOperator();
+            //    form.Show();
+            //    this.Hide();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Username atau Password salah!", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
 
             //if (PetaniController.Login(username, password))
             //{
@@ -68,6 +102,7 @@ namespace Projek_Sinar_Mulia
             registerForm.Show();
             this.Hide();
         }
+
 
 
 

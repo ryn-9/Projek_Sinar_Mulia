@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LihatStatusPermintaan));
             dataGridView1 = new DataGridView();
-            btnBack = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -41,25 +39,12 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(525, 235);
             dataGridView1.TabIndex = 0;
-            // 
-            // btnBack
-            // 
-            btnBack.BackColor = Color.Transparent;
-            btnBack.BackgroundImage = (Image)resources.GetObject("btnBack.BackgroundImage");
-            btnBack.BackgroundImageLayout = ImageLayout.Zoom;
-            btnBack.FlatAppearance.BorderSize = 0;
-            btnBack.FlatStyle = FlatStyle.Flat;
-            btnBack.Location = new Point(310, 377);
-            btnBack.Name = "btnBack";
-            btnBack.Size = new Size(129, 46);
-            btnBack.TabIndex = 1;
-            btnBack.UseVisualStyleBackColor = false;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // LihatStatusPermintaan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(btnBack);
             Controls.Add(dataGridView1);
             Name = "LihatStatusPermintaan";
             Size = new Size(816, 488);
@@ -70,6 +55,5 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private Button btnBack;
     }
 }

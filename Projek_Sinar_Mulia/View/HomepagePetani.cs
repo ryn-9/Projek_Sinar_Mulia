@@ -1,4 +1,5 @@
-﻿using Projek_Sinar_Mulia.View.UC;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using Projek_Sinar_Mulia.View.UC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +15,23 @@ namespace Projek_Sinar_Mulia
     public partial class HomepagePetani : Form
     {
         Panel panelIndicator;
-        public HomepagePetani()
+        private int currentUserId;
+        private int UserId; // deklarasi variabel di atas class
+
+        public HomepagePetani(int idUser) // <- ini WAJIB ada
         {
             InitializeComponent();
+            currentUserId = idUser;
+
+            // Load awal
+            var riwayatUC = new Riwayat(currentUserId);
+            riwayatUC.Dock = DockStyle.Fill;
+            pnlutama.Controls.Clear();
+            pnlutama.Controls.Add(riwayatUC);
         }
+
+
+
         private void MoveIndicator(Control button)
         {
             picindikator.Top = button.Top;
@@ -34,7 +48,7 @@ namespace Projek_Sinar_Mulia
         private void btnriwayat_Click(object sender, EventArgs e)
         {
             MoveIndicator(btnriwayat);
-            UCMasuk(new Riwayat());
+            UCMasuk(new Riwayat(currentUserId));
         }
 
         private void btnlahan_Click(object sender, EventArgs e)
@@ -68,6 +82,12 @@ namespace Projek_Sinar_Mulia
         private void picindikator_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnlihatstatus_Click(object sender, EventArgs e)
+        {
+            MoveIndicator(btnkelolapermintaan);
+            UCMasuk(new LihatStatusPermintaan());
         }
     }
 }
