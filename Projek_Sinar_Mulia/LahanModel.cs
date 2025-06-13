@@ -19,7 +19,7 @@ namespace Projek_Sinar_Mulia
 
         public override string ToString()
         {
-            return $"Blok {blok}, Jl. {jalan}, RT {rt}/RW {rw}";
+            return $"Luas {luas}, Blok {blok}, Jl. {jalan}, RT {rt}/RW {rw}";
         }
     }
 }

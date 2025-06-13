@@ -15,6 +15,12 @@ namespace Projek_Sinar_Mulia
         public LihatStatusPermintaan()
         {
             InitializeComponent();
+            LoadPermintaanIrigasi();
+        }
+        private void LoadPermintaanIrigasi()
+        {
+            string connString = "Host=localhost;Port=5432;Username=postgres;Password=dinadin;Database=sinarmulia";
+
         }
     }
 }

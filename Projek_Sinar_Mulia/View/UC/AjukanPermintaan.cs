@@ -67,8 +67,10 @@ namespace Projek_Sinar_Mulia
         }
 
         private void cbLokasi_SelectedIndexChanged(object sender, EventArgs e)
-        {      
-
+        {
+            cbLokasi.DisplayMember = "DisplayLabel";
+            cbLokasi.ValueMember = "id_lahan";
+            //cbLokasi.SelectedIndex = -1;
         }
         private void UserControl_Load(object sender, EventArgs e)
         {
