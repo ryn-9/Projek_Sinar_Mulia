@@ -21,7 +21,7 @@ namespace Projek_Sinar_Mulia
         {
             var lahanService = new LahanService();
             cbLokasi.DataSource = lahanService.GetAllLahan();
-            cbLokasi.DisplayMember = "ToString"; // atau "id_lahan"
+            cbLokasi.DisplayMember = "ToString";
             cbLokasi.ValueMember = "id_lahan";
         }
         private void tbLokasi_TextChanged_1(object sender, EventArgs e)
@@ -70,7 +70,6 @@ namespace Projek_Sinar_Mulia
         {
             cbLokasi.DisplayMember = "DisplayLabel";
             cbLokasi.ValueMember = "id_lahan";
-            //cbLokasi.SelectedIndex = -1;
         }
         private void UserControl_Load(object sender, EventArgs e)
         {

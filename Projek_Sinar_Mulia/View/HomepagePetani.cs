@@ -43,9 +43,18 @@ namespace Projek_Sinar_Mulia
 
         private void btnlogout_Click(object sender, EventArgs e)
         {
-            var loginForm = new Login();
-            loginForm.Show();
-            this.Close();
+            DialogResult result = MessageBox.Show("Apakah kamu yakin?", "Logout", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (result == DialogResult.OK)
+            {
+                var loginForm = new Login();
+                loginForm.Show();
+                this.Close();
+            }
+            else
+            {
+
+            }
         }
 
         private void btnlahan_Click(object sender, EventArgs e)

@@ -103,7 +103,7 @@
             // 
             tbDurasi.BackColor = Color.Gainsboro;
             tbDurasi.BorderStyle = BorderStyle.None;
-            tbDurasi.Location = new Point(145, 265);
+            tbDurasi.Location = new Point(145, 271);
             tbDurasi.Name = "tbDurasi";
             tbDurasi.Size = new Size(309, 16);
             tbDurasi.TabIndex = 8;
