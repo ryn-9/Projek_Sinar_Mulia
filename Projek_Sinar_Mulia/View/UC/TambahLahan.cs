@@ -8,14 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Npgsql;
+using System.Reflection.Metadata;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace Projek_Sinar_Mulia.View.UC
 {
     public partial class TambahLahan : UserControl
     {
-        public TambahLahan()
+        private int currentUserId;
+        public TambahLahan(int idUser)
         {
             InitializeComponent();
+            MessageBox.Show($"Login berhasil. userId = {idUser}");
+            currentUserId = idUser;
             this.Load += new System.EventHandler(this.UserControl_Load);
             cbRW.SelectedIndexChanged += new EventHandler(cbRW_SelectedIndexChanged);
             cbRT.SelectedIndexChanged += new EventHandler(cbRT_SelectedIndexChanged);
@@ -59,29 +65,46 @@ namespace Projek_Sinar_Mulia.View.UC
                 cbJalan.SelectedIndex = -1;
             }
         }
-
         private void btnSimpanLahan_Click(object sender, EventArgs e)
         {
             if (cbJalan.SelectedItem is JalanModel selectedJalan)
             {
                 string blok = tbBlok.Text.Trim();
+                string luas = tbLuas.Text.Trim();
 
-                if (string.IsNullOrEmpty(blok))
+                if (string.IsNullOrEmpty(blok) || string.IsNullOrEmpty(luas))
                 {
-                    MessageBox.Show("Blok lahan belum diisi.");
+                    MessageBox.Show("Blok atau luas belum diisi.");
                     return;
                 }
 
-                var alamatService = new AlamatService();
-                alamatService.SimpanAlamat(blok, selectedJalan.id_jalan);
+                int id_jalan = selectedJalan.id_jalan;
+                //int id_users = idUser;
 
-                MessageBox.Show("Alamat berhasil disimpan!");
+                using var conn = Database.GetConnection();
+                conn.Open();
+                var cmd = new NpgsqlCommand("INSERT INTO lahan (luas, blok, id_jalan, id_users) VALUES (@luas, @blok, @id_jalan, @id_users)", conn);
+                cmd.Parameters.AddWithValue("@luas", luas);
+                cmd.Parameters.AddWithValue("@blok", blok);
+                cmd.Parameters.AddWithValue("@id_jalan", id_jalan);
+                cmd.Parameters.AddWithValue("@id_users", currentUserId);
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Lahan berhasil disimpan!");
                 tbBlok.Clear();
+                tbLuas.Clear();
+                cbRW.SelectedIndex = -1;
+                cbRT.DataSource = null;
+                cbJalan.DataSource = null;
             }
             else
             {
                 MessageBox.Show("Silakan pilih Jalan terlebih dahulu.");
             }
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

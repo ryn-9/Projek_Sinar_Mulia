@@ -11,6 +11,7 @@ namespace Projek_Sinar_Mulia
     {
         public int id_rw { get; set; }
         public int rw { get; set; }
+
         public override string ToString() => $"RW {rw}";
     }
 }

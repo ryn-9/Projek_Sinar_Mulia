@@ -33,7 +33,7 @@ namespace Projek_Sinar_Mulia.View.UC
                     pi.tgl_permintaan AS ""Tanggal_Permintaan"", 
                     u.username AS ""Petani"", 
                     l.luas AS ""Luas"", 
-                    a.blok AS ""Blok"", 
+                    l.blok AS ""Blok"", 
                     j.jalan AS ""Jalan"", 
                     rt.rt AS ""RT"", 
                     rw.rw AS ""RW"", 
@@ -41,7 +41,6 @@ namespace Projek_Sinar_Mulia.View.UC
                 FROM permintaan_irigasi pi
                 JOIN lahan l USING(id_lahan)
                 JOIN users u USING(id_users)
-                JOIN alamat a USING(id_alamat)
                 JOIN jalan j USING(id_jalan)
                 JOIN rt rt USING(id_rt)
                 JOIN rw rw USING(id_rw)

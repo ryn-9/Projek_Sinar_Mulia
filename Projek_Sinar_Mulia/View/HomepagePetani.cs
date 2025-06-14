@@ -15,14 +15,14 @@ namespace Projek_Sinar_Mulia
     public partial class HomepagePetani : Form
     {
         Panel panelIndicator;
-        private int currentUserId;
-        private int UserId;
+        //private int currentUserId;
+        private int _idUser;
         private string currentUsername;
 
         public HomepagePetani(int idUser, string username)
         {
             InitializeComponent();
-            currentUserId = idUser;
+            _idUser = idUser;
             currentUsername = username;
             this.Load += new System.EventHandler(this.HomepagePetani_Load);
         }
@@ -38,7 +38,7 @@ namespace Projek_Sinar_Mulia
         private void btnkelolapermintaan_Click(object sender, EventArgs e)
         {
             MoveIndicator(btnkelolapermintaan);
-            UCMasuk(new AjukanPermintaan());            
+            UCMasuk(new AjukanPermintaan(_idUser));            
         }
 
         private void btnlogout_Click(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace Projek_Sinar_Mulia
         private void btnlahan_Click(object sender, EventArgs e)
         {
             MoveIndicator(btnlahan);
-            UCMasuk(new TambahLahan());
+            UCMasuk(new TambahLahan(_idUser));
             //UCMasuk(new UCabout());
         }
         private void UCMasuk(UserControl uc)

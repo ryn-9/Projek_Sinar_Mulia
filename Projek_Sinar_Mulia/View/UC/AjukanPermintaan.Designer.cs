@@ -118,7 +118,6 @@
             lbLokasi.Size = new Size(80, 15);
             lbLokasi.TabIndex = 10;
             lbLokasi.Text = "Pilih Lahan";
-            lbLokasi.Click += lbLokasi_Click;
             // 
             // lbTanggal
             // 

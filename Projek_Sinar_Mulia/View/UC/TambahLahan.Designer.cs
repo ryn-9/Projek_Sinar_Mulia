@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TambahLahan));
+            Label lbLuas;
             cbRW = new ComboBox();
             cbRT = new ComboBox();
             cbJalan = new ComboBox();
@@ -39,12 +40,14 @@
             lbJalan = new Label();
             label1 = new Label();
             label2 = new Label();
+            tbLuas = new TextBox();
+            lbLuas = new Label();
             SuspendLayout();
             // 
             // cbRW
             // 
             cbRW.FormattingEnabled = true;
-            cbRW.Location = new Point(192, 147);
+            cbRW.Location = new Point(192, 112);
             cbRW.Name = "cbRW";
             cbRW.Size = new Size(217, 23);
             cbRW.TabIndex = 0;
@@ -53,7 +56,7 @@
             // cbRT
             // 
             cbRT.FormattingEnabled = true;
-            cbRT.Location = new Point(192, 193);
+            cbRT.Location = new Point(192, 158);
             cbRT.Name = "cbRT";
             cbRT.Size = new Size(217, 23);
             cbRT.TabIndex = 1;
@@ -61,14 +64,14 @@
             // cbJalan
             // 
             cbJalan.FormattingEnabled = true;
-            cbJalan.Location = new Point(192, 240);
+            cbJalan.Location = new Point(192, 205);
             cbJalan.Name = "cbJalan";
             cbJalan.Size = new Size(217, 23);
             cbJalan.TabIndex = 2;
             // 
             // tbBlok
             // 
-            tbBlok.Location = new Point(192, 285);
+            tbBlok.Location = new Point(192, 250);
             tbBlok.Name = "tbBlok";
             tbBlok.Size = new Size(217, 23);
             tbBlok.TabIndex = 3;
@@ -90,44 +93,44 @@
             // lbRW
             // 
             lbRW.AutoSize = true;
-            lbRW.Font = new Font("Paytone One", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbRW.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbRW.ForeColor = Color.FromArgb(50, 107, 74);
-            lbRW.Location = new Point(191, 129);
+            lbRW.Location = new Point(191, 94);
             lbRW.Name = "lbRW";
-            lbRW.Size = new Size(60, 20);
+            lbRW.Size = new Size(54, 15);
             lbRW.TabIndex = 5;
             lbRW.Text = "Pilih RW";
             // 
             // lbRT
             // 
             lbRT.AutoSize = true;
-            lbRT.Font = new Font("Paytone One", 8.999999F);
+            lbRT.Font = new Font("Microsoft Sans Serif", 8.999999F);
             lbRT.ForeColor = Color.FromArgb(50, 107, 74);
-            lbRT.Location = new Point(192, 175);
+            lbRT.Location = new Point(192, 140);
             lbRT.Name = "lbRT";
-            lbRT.Size = new Size(55, 20);
+            lbRT.Size = new Size(50, 15);
             lbRT.TabIndex = 6;
             lbRT.Text = "Pilih RT";
             // 
             // lbJalan
             // 
             lbJalan.AutoSize = true;
-            lbJalan.Font = new Font("Paytone One", 8.999999F);
+            lbJalan.Font = new Font("Microsoft Sans Serif", 8.999999F);
             lbJalan.ForeColor = Color.FromArgb(50, 107, 74);
-            lbJalan.Location = new Point(193, 222);
+            lbJalan.Location = new Point(193, 187);
             lbJalan.Name = "lbJalan";
-            lbJalan.Size = new Size(74, 20);
+            lbJalan.Size = new Size(64, 15);
             lbJalan.TabIndex = 7;
             lbJalan.Text = "Pilih Jalan";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Paytone One", 8.999999F);
+            label1.Font = new Font("Microsoft Sans Serif", 8.999999F);
             label1.ForeColor = Color.FromArgb(50, 107, 74);
-            label1.Location = new Point(195, 268);
+            label1.Location = new Point(195, 233);
             label1.Name = "label1";
-            label1.Size = new Size(187, 20);
+            label1.Size = new Size(170, 15);
             label1.TabIndex = 8;
             label1.Text = "Masukkan Blok Lahan Sawah";
             // 
@@ -135,19 +138,39 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Paytone One", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
             label2.Location = new Point(14, 25);
             label2.Name = "label2";
-            label2.Size = new Size(76, 31);
+            label2.Size = new Size(62, 24);
             label2.TabIndex = 9;
             label2.Text = "Lahan";
+            // 
+            // tbLuas
+            // 
+            tbLuas.Location = new Point(194, 300);
+            tbLuas.Name = "tbLuas";
+            tbLuas.Size = new Size(215, 23);
+            tbLuas.TabIndex = 10;
+            tbLuas.TextChanged += textBox1_TextChanged;
+            // 
+            // lbLuas
+            // 
+            lbLuas.AutoSize = true;
+            lbLuas.ForeColor = Color.SeaGreen;
+            lbLuas.Location = new Point(196, 280);
+            lbLuas.Name = "lbLuas";
+            lbLuas.Size = new Size(147, 15);
+            lbLuas.TabIndex = 11;
+            lbLuas.Text = "Masukkan Luas Lahan (ha)";
             // 
             // TambahLahan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            Controls.Add(lbLuas);
+            Controls.Add(tbLuas);
             Controls.Add(label2);
             Controls.Add(btnSimpanLahan);
             Controls.Add(tbBlok);
@@ -176,5 +199,6 @@
         private Label lbJalan;
         private Label label1;
         private Label label2;
+        private TextBox tbLuas;
     }
 }

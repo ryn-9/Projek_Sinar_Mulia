@@ -27,6 +27,8 @@ namespace Projek_Sinar_Mulia
                 if (roleId.Value == 1)
                 {
                     MessageBox.Show("Login sebagai Petani");
+                    MessageBox.Show($"Login berhasil. userId = {userId}, roleId = {roleId}");
+
 
 
                     var form = new HomepagePetani(userId.Value, username);

@@ -11,7 +11,7 @@ namespace Projek_Sinar_Mulia
     {
         public void SimpanAlamat(string blok, int id_jalan)
         {
-            using var conn = Database.GetConnection(); // ← ini pakai koneksi dari class Database
+            using var conn = Database.GetConnection(); 
             conn.Open();
             var cmd = new NpgsqlCommand("INSERT INTO alamat (blok, id_jalan) VALUES (@blok, @id_jalan)", conn);
             cmd.Parameters.AddWithValue("@blok", blok);

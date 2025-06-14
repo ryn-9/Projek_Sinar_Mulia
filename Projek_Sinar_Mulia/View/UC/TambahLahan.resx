@@ -121,7 +121,7 @@
   <data name="btnSimpanLahan.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAL8AAAAxCAYAAACLUHiuAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAABg5JREFUeF7tnT1vHFUUhvcn8BP4A97dctahSAMSXaBIR2KJLjRUUCEiUaDsrmVL
+        EQAACxEBf2RfkQAABg5JREFUeF7tnT1vHFUUhvcn8BP4A97dctahSAMSXaBIR2KJLjRUUCEiUaDsrmVL
         FJEgEh9K4VROJCK6WBTQQEgBRQiFJaREgmbBFNAN9x3f4z1z98zcmfF6d87seaVHtvd+zIz3vWfOvTOz
         21uGLu8NX0p2hzujcX9/NB0cjnYHx+7nzJEaxrk59dMR/HVp2r+e7A1f9tZbj2D47Wn/w2ynpB02jAtk
         ezp4svKBwExvkd1oBduTwecXPgjM9EabgT+9VZcnjCo3up5IGzSMVjEZHC/tLIC8ynVq0d7QhPPr8Iq3
@@ -150,10 +150,13 @@
         +F7vf3Khqn6hAX1KAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="lbLuas.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAlkAAAGtCAYAAAAlE2HVAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAADrBJREFUeF7t3U9OG2kawOEcIUfoI3igW+plNiPFRk37BmEzUsYeKQRn39wguQEd
+        EQAACxEBf2RfkQAADrBJREFUeF7t3U9OG2kawOEcIUfoI3igW+plNiPFRk37BmEzUsYeKQRn39wguQEd
         kz1H4Ag5Qo7AEXr82S8Q4AVsU7brz/NIP/VqJrjsqnpV9bn86s/zyT+SVEWHXz+evgJgITtQStKqGbAA
         7skOlpK0SsNvn47jkALAteyAKUnLNpyeHMXhBICfZQdNSXq26cnVcDoZxqEEgPvSg6ckPVUZsM6Oe3EY
         ASCTHkAl6bGmJz9mA9YvcQgB4DHpQVSSsgxYAMtLD6SSdL/p5LsBC2AF6cFUku52ORuwXsdhA4BlJAdT

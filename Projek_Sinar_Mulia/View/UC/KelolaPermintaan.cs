@@ -8,7 +8,7 @@ namespace Projek_Sinar_Mulia.View.UC
 {
     public partial class KelolaPermintaan : UserControl
     {
-        private string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=babamamak55;Database=PBO;";
+        private string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=dinadin;Database=sinmul;";
         private Dictionary<int, string> statusDict = new Dictionary<int, string>();
         private Dictionary<string, int> reverseStatusDict = new Dictionary<string, int>();
 
@@ -48,7 +48,7 @@ namespace Projek_Sinar_Mulia.View.UC
             {
                 conn.Open();
                 string query = @"
-                    SELECT pi.id_permintaan, pi.tgl_permintaan, pi.id_lahan, s.status
+                    SELECT pi.id_permintaan, pi.tgl_permintaan, pi.id_lahan, pi.durasi, s.status
                     FROM permintaan_irigasi pi
                     JOIN status s ON pi.id_status = s.id_status
                     ORDER BY pi.id_permintaan";

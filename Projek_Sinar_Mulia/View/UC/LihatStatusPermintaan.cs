@@ -25,13 +25,13 @@ namespace Projek_Sinar_Mulia
         }
         private void LoadRiwayatData()
         {
-            string connString = "Host=localhost;Port=5432;Username=postgres;Password=babamamak55;Database=PBO";
+            string connString = "Host=localhost;Port=5432;Username=postgres;Password=dinadin;Database=sinmul";
             using (NpgsqlConnection conn = new NpgsqlConnection(connString))
             {
                 try
                 {
                     conn.Open();
-                    string query = "select pi.tgl_permintaan as \"Tanggal_Permintaan\", u.username as \"Petani\", l.luas as \"Luas\", a.blok as \"Blok\", j.jalan as \"Jalan\", rt.rt as \"RT\", rw.rw as \"RW\", s.status as \"Status\"from permintaan_irigasi pi\r\njoin lahan l using(id_lahan)\r\njoin users u using(id_users)\r\njoin alamat a using(id_alamat)\r\njoin jalan j using(id_jalan)\r\njoin rt rt using(id_rt)\r\njoin rw rw using(id_rw)\r\njoin status s using(id_status)";
+                    string query = "select pi.tgl_permintaan as \"Tanggal_Permintaan\",pi.durasi as \"Durasi\", u.username as \"Petani\", l.luas as \"Luas\", l.blok as \"Blok\", j.jalan as \"Jalan\", rt.rt as \"RT\", rw.rw as \"RW\", s.status as \"Status\"from permintaan_irigasi pi\r\njoin lahan l using(id_lahan)\r\njoin users u using(id_users)\r\njoin jalan j using(id_jalan)\r\njoin rt rt using(id_rt)\r\njoin rw rw using(id_rw)\r\njoin status s using(id_status)";
                     NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);

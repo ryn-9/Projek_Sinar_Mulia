@@ -9,7 +9,7 @@ namespace Projek_Sinar_Mulia
 {
     class LahanService
     {
-        public List<LahanModel> GetAllLahan()
+        public List<LahanModel> GetAllLahan(int idUsers)
         {
             var list = new List<LahanModel>();
             using var conn = Database.GetConnection();
@@ -17,21 +17,16 @@ namespace Projek_Sinar_Mulia
 
             var sql = @"
             SELECT 
-            la.id_lahan,
-            la.luas,
-            la.id_users,
-            la.id_alamat,
-            al.blok,
-            ja.jalan,
-            rt.rt,
-            rw.rw
-            FROM lahan la
-            JOIN alamat al ON la.id_alamat = al.id_alamat
-            JOIN jalan ja ON al.id_jalan = ja.id_jalan
-            JOIN rt ON ja.id_rt = rt.id_rt
-            JOIN rw ON rt.id_rw = rw.id_rw";
+            l.id_lahan, l.luas, l.id_users, l.blok,
+            j.jalan,rt.rt, rw.rw
+            FROM lahan l
+            JOIN jalan j ON l.id_jalan = j.id_jalan
+            JOIN rt ON j.id_rt = rt.id_rt
+            JOIN rw ON rt.id_rw = rw.id_rw
+            WHERE l.id_users = @id_users";
 
             using var cmd = new NpgsqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@id_users", idUsers);
             using var reader = cmd.ExecuteReader();
 
             while (reader.Read())
@@ -39,17 +34,26 @@ namespace Projek_Sinar_Mulia
                 list.Add(new LahanModel
                 {
                     id_lahan = reader.GetInt32(0),
-                    luas = reader.GetDouble(1),
+                    luas = reader.GetString(1),
                     id_users = reader.GetInt32(2),
-                    id_alamat = reader.GetInt32(3),
-                    blok = reader.GetString(4),
-                    jalan = reader.GetString(5),
-                    rt = reader.GetInt32(6),
-                    rw = reader.GetInt32(7)
+                    blok = reader.GetString(3),
+                    jalan = reader.GetString(4),
+                    rt = reader.GetInt32(5),
+                    rw = reader.GetInt32(6)
                 });
             }
 
             return list;
+        }
+        public void SimpanLahan(string luas, string blok, int id_jalan)
+        {
+            using var conn = Database.GetConnection(); 
+            conn.Open();
+            var cmd = new NpgsqlCommand("INSERT INTO lahan (luas, blok, id_jalan) VALUES (@luas, @blok, @id_jalan)", conn);
+            cmd.Parameters.AddWithValue("@luas", luas);
+            cmd.Parameters.AddWithValue("@blok", blok);
+            cmd.Parameters.AddWithValue("@id_jalan", id_jalan);
+            cmd.ExecuteNonQuery();
         }
 
     }

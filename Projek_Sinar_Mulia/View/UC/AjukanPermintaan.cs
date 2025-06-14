@@ -12,17 +12,28 @@ namespace Projek_Sinar_Mulia
 {
     public partial class AjukanPermintaan : UserControl
     {
-        public AjukanPermintaan()
+        private int idUsers;
+        public AjukanPermintaan(int idUser)
         {
             InitializeComponent();
+            idUsers = idUser;
             this.Load += new System.EventHandler(this.UserControl_Load);
         }
-        private void AjukanPermintaan_Load(object sender, EventArgs e)
+
+        private void UserControl_Load(object sender, EventArgs e)
         {
             var lahanService = new LahanService();
-            cbLokasi.DataSource = lahanService.GetAllLahan();
-            cbLokasi.DisplayMember = "ToString";
+            var lahanList = lahanService.GetAllLahan(idUsers);
+
+            if (lahanList.Count == 0)
+            {
+                MessageBox.Show("Data lahan kosong");
+            }
+
+            cbLokasi.DataSource = lahanList;
+            cbLokasi.DisplayMember = "DisplayLabel";
             cbLokasi.ValueMember = "id_lahan";
+            cbLokasi.SelectedIndex = -1;
         }
         private void tbLokasi_TextChanged_1(object sender, EventArgs e)
         {
@@ -70,14 +81,6 @@ namespace Projek_Sinar_Mulia
         {
             cbLokasi.DisplayMember = "DisplayLabel";
             cbLokasi.ValueMember = "id_lahan";
-        }
-        private void UserControl_Load(object sender, EventArgs e)
-        {
-            var LahanService = new LahanService();
-            cbLokasi.DataSource = LahanService.GetAllLahan();
-            cbLokasi.DisplayMember = "lahan";
-            cbLokasi.ValueMember = "id_lahan";
-            cbLokasi.SelectedIndex = -1;
         }
     }
 }
