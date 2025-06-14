@@ -36,8 +36,6 @@ namespace Projek_Sinar_Mulia.View
         {
             MoveIndicator(btnpermintaan);
             UCMasuk(new KelolaPermintaan());
-
-
         }
         private void UCMasuk(UserControl uc)
         {

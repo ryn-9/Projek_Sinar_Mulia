@@ -28,7 +28,7 @@ namespace Projek_Sinar_Mulia
                 {
                     MessageBox.Show("Login sebagai Petani");
 
-                    // Gunakan userId.Value di sini
+
                     var form = new HomepagePetani(userId.Value, username);
                     form.Show();
                     this.Hide();
